@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocole d'Extermination | WH40K V10</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;500&family=Cinzel:wght@700&family=Exo+2:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="container">
+        <header>
+            <h1 class="highlight">Phase de Tir</h1>
+            <div class="terminal">
+                > Acquisition de cibles en cours...<br>
+                > Calcul des probabilités de pénétration balistique...<br>
+                > <span class="gold-text">COMMENCEZ LE CHÂTIMENT PAR LE FEU</span>
+            </div>
+        </header>
+
+        <section class="experience-stack">
+            
+            <div class="exp-card">
+                <div class="exp-sidebar">
+                    <div class="exp-icon">A</div>
+                    <div class="exp-line"></div>
+                </div>
+                <div class="exp-content">
+                    <h3 class="gold-text">JET POUR TOUCHER (HIT ROLL)</h3>
+                    <div class="detail-box">
+                        <p>Lancez autant de dés que la caractéristique <span class="highlight">Attaques (A)</span> de l'arme.</p>
+                        <p>Réussite si dé ≥ <span class="highlight">Capacité de Tir (CT)</span>.</p>
+                        <div class="tags">
+                            <span>[HEAVY] +1 si statique</span>
+                            <span>[TORRENT] Touche Auto</span>
+                            <span>[TIRS SOUTENUS] Explose sur 6</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exp-card">
+                <div class="exp-sidebar">
+                    <div class="exp-icon">B</div>
+                    <div class="exp-line"></div>
+                </div>
+                <div class="exp-content">
+                    <h3 class="gold-text">JET POUR BLESSER (WOUND ROLL)</h3>
+                    <div class="detail-box">
+                        <p>Comparez la <strong>Force (S)</strong> de l'arme à l'<strong>Endurance (E)</strong> de la cible :</p>
+                        
+                        <div class="terminal" style="font-size: 0.8rem; margin: 10px 0;">
+                            S ≥ 2x E ........ <span class="highlight">2+</span><br>
+                            S > E ........... <span class="highlight">3+</span><br>
+                            S = E ........... <span class="highlight">4+</span><br>
+                            S < E ........... <span class="highlight">5+</span><br>
+                            S ≤ 0.5x E ...... <span class="highlight">6+</span>
+                        </div>
+                        <div class="tags">
+                            <span>[ANTI-VÉHICULE X+]</span>
+                            <span>[LETHAL HITS] Auto-blessure sur 6 crit</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div class="exp-card">
+                <div class="exp-sidebar">
+                    <div class="exp-icon">C</div>
+                    <div class="exp-line"></div>
+                </div>
+                <div class="exp-content">
+                    <h3 class="gold-text">JET DE SAUVEGARDE (SAVE ROLL)</h3>
+                    <div class="detail-box">
+                        <p>Le défenseur tente d'annuler la blessure.</p>
+                        <ul class="task-list">
+                            <li>Dé ≥ <span class="highlight">Sauvegarde (Sv)</span> de la figurine.</li>
+                            <li>Appliquez la <span class="gold-text">Pénétration d'Armure (AP)</span> de l'arme (ex: AP -2 réduit la Sv de 2).</li>
+                            <li><span class="highlight">Bénéfice du Couvert :</span> +1 au jet (sauf contre AP 0 ou [IGNORES COVER]).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exp-card">
+                <div class="exp-sidebar">
+                    <div class="exp-icon">D</div>
+                </div>
+                <div class="exp-content">
+                    <h3 class="gold-text">ALLOCATION DES DÉGÂTS</h3>
+                    <div class="detail-box">
+                        <p>Chaque échec inflige des dégâts égaux à la caractéristique <strong>Dégâts (D)</strong> de l'arme.</p>
+                        <p class="highlight">> [MORTAL WOUNDS] : Pas de sauvegarde possible, les dégâts excédentaires sont transférés.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="phase-d-assaut.html" class="btn-40k" style="text-decoration: none;">INITIALISER : PHASE D'ASSAUT >></a>
+        </div>
+    </div>
+
+    <script>
+        fetch('navbar2.html').then(res => res.text()).then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+    </script>
+</body>
+</html>

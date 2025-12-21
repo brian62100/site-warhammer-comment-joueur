@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Sélection du Chapitre | Adeptus Astartes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="container">
+        <header>
+            <h1 class="highlight">Sélection du Chapitre</h1>
+            <div class="terminal">
+                > Accès à la base de données du Codex Astartes...<br>
+                > Filtrage par héraldique et doctrine de combat...<br>
+                > <span class="gold-text">SÉLECTIONNEZ UNE ENTRÉE :</span>
+            </div>
+        </header>
+
+        <div class="main-grid">
+            <a href="ultramarines-presentation.html" class="category-btn">
+                <div class="card" style="border-bottom: 3px solid #005ab2;">
+                    <img src="https://warhammer40000.com/wp-content/uploads/2023/05/40k_sm_ultramarines_logo.png" alt="Icone UM" style="width: 50px; margin-bottom: 10px;">
+                    <h3 style="color: #005ab2;">ULTRAMARINES</h3>
+                    <p>Discipline, stratégie et honneur.</p>
+                </div>
+            </a>
+
+            <div class="card" style="opacity: 0.5; border-bottom: 3px solid #b20000;">
+                <h3 style="color: #b20000;">BLOOD ANGELS</h3>
+                <p>[ DONNÉES EN ATTENTE ]</p>
+            </div>
+
+            <div class="card" style="opacity: 0.5; border-bottom: 3px solid #004020;">
+                <h3 style="color: #004020;">DARK ANGELS</h3>
+                <p>[ DONNÉES EN ATTENTE ]</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="factions.html" class="highlight" style="text-decoration: none;"><< Retour aux Factions</a>
+        </div>
+    </div>
+
+    <script>
+        fetch('navbar.html').then(res => res.text()).then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+    </script>
+</body>
+</html>

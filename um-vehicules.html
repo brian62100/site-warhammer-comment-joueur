@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Châssis & Blindés | Ultramarines</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="container">
+        <header>
+            <h1 class="highlight">Division Blindée</h1>
+            <p class="gold-text">Arsenal de Soutien Lourd // Adeptus Astartes</p>
+        </header>
+
+        <div class="exp-card datasheet">
+            <div class="datasheet-header">
+                <h2 class="gold-text">DREADNOUGHT REDEMPTOR</h2>
+                <span class="tag">VÉHICULE / MARCHEUR</span>
+            </div>
+
+            <div class="detail-box">
+                <h4 class="highlight">COMPOSITION</h4>
+                <p>Une relique blindée imposante. Équipée ici pour la polyvalence : destruction de blindés au plasma et saturation d'infanterie aux grenades.</p>
+            </div>
+
+            <div class="stats-table-wrapper">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>Mouvement</th>
+                            <th>Force</th>
+                            <th>Endurance</th>
+                            <th>PV</th>
+                            <th>Attaque</th>
+                            <th>Sauvegarde</th>
+                            <th>Commandement</th>
+                            <th>Objectif (CO)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>20 cm</td>
+                            <td>4</td>
+                            <td>9</td>
+                            <td>12</td>
+                            <td>2</td>
+                            <td>2+</td>
+                            <td>6+</td>
+                            <td>4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">ARMEMENT DE TIR (CT 3+)</h4>
+            <div class="stats-table-wrapper">
+                <table class="weapon-table">
+                    <thead>
+                        <tr>
+                            <th>Arme</th>
+                            <th>Portée</th>
+                            <th>Attaques</th>
+                            <th>Force</th>
+                            <th>Pénétration</th>
+                            <th>Dégâts</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Canon Plasma Rouge (Surchargé)</td>
+                            <td>90 cm</td>
+                            <td>1D6</td>
+                            <td>9</td>
+                            <td>-3</td>
+                            <td>3</td>
+                            <td>[HEAVY] / [HAZARDOUS]</td>
+                        </tr>
+                        <tr>
+                            <td>Canon Gatling à Tempête</td>
+                            <td>60 cm</td>
+                            <td>6</td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>2 Lance-grenades Fragstorm</td>
+                            <td>45 cm</td>
+                            <td>2D6</td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>[BLAST]</td>
+                        </tr>
+                        <tr>
+                            <td>Nacelle Lance-roquettes Icarus</td>
+                            <td>120 cm</td>
+                            <td>1</td>
+                            <td>8</td>
+                            <td>-1</td>
+                            <td>2</td>
+                            <td>[ANTI-FLY 2+]</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">ARMEMENT DE MÊLÉE (CC 3+)</h4>
+            <div class="stats-table-wrapper">
+                <table class="weapon-table">
+                    <thead>
+                        <tr>
+                            <th>Arme</th>
+                            <th>Attaques</th>
+                            <th>Force</th>
+                            <th>Pénétration</th>
+                            <th>Dégâts</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Poing de Redemptor</td>
+                            <td>5</td>
+                            <td>14</td>
+                            <td>-2</td>
+                            <td>D6+1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">APTITUDES DE COMBAT</h4>
+            <div class="terminal" style="font-size: 0.85rem;">
+                <p><span class="gold-text">[FEU RÉACTIF] :</span> Les attaques effectuées contre cette unité ne peuvent jamais bénéficier d'un bonus au jet pour Toucher.</p>
+                <p style="margin-top: 5px;"><span class="gold-text">[BLAST] :</span> Si l'unité ennemie a 5+ figurines, cette arme lance le dés d'attaque (D3 tirs minimum), et si elle a 10+ figurines, elle effectue le nombre max d'attaque.</p>
+                <p style="margin-top: 5px;"><span class="gold-text">[ANTI-FLY 2+] :</span> Un jet pour Blesser de 2+ réussit automatiquement contre les unités ayant le mot-clé VOL.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        fetch('navbar.html').then(res => res.text()).then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+    </script>
+</body>
+</html>

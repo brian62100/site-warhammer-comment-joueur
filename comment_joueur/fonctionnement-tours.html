@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Séquence de Combat | WH40K V10</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;500&family=Cinzel:wght@700&family=Exo+2:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="container">
+        <header>
+            <h1 class="highlight">Séquence de Bataille</h1>
+            <div class="terminal">
+                > Initialisation de l'analyse tactique globale...<br>
+                > Analyse des 5 protocoles de combat standards v.10...<br>
+                > <span class="gold-text">STATUT : PRÊT POUR LE DÉPLOIEMENT</span>
+            </div>
+        </header>
+
+        <section class="experience-stack">
+            
+            <div class="exp-card">
+                <div class="exp-content">
+                    <div class="exp-header-main">
+                        <div>
+                            <h3 class="gold-text">Phase de Commandement</h3>
+                            <p class="project-category">Ressources & Stratégie</p>
+                        </div>
+                        <a href="phase-commandement.html" class="btn-project">Détails Phase</a>
+                    </div>
+                    <div class="detail-box">
+                        <ul class="task-list">
+                            <li><span class="highlight">Aptitudes :</span> Détermination des cibles (ex: Serment de l'Instant).</li>
+                            <li><span class="highlight">Logistique :</span> Gain de 1 PC pour chaque joueur.</li>
+                            <li><span class="highlight">Maintenance :</span> Résolution des aptitudes de début et fin de phase.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exp-card">
+                <div class="exp-content">
+                    <div class="exp-header-main">
+                        <div>
+                            <h3 class="gold-text">Phase de Mouvement</h3>
+                            <p class="project-category">Positionnement Tactique</p>
+                        </div>
+                    </div>
+                    <div class="detail-box">
+                        <ul class="task-list">
+                            <li><span class="highlight">Mouvement Normal :</span> Déplacement selon la caractéristique (M).</li>
+                            <li><span class="highlight">Avance :</span> (M) + 1D6 (Tir impossible sauf arme [ASSAULT]).</li>
+                            <li><span class="highlight">Retraite :</span> Désengagement (Tir/Charge impossible sauf [PISTOL]).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exp-card">
+                <div class="exp-content">
+                    <div class="exp-header-main">
+                        <div>
+                            <h3 class="gold-text">Phase de Tir</h3>
+                            <p class="project-category">Éradication à Distance</p>
+                        </div>
+                    </div>
+                    <div class="detail-box">
+                        <p>Sélection des unités aptes au tir. Acquisition de cibles visibles et à portée pour délivrer le châtiment de l'Empereur (ou des Dieux Sombres).</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exp-card">
+                <div class="exp-content">
+                    <div class="exp-header-main">
+                        <div>
+                            <h3 class="gold-text">Phase d'Assaut</h3>
+                            <p class="project-category">Engagement Proche</p>
+                        </div>
+                    </div>
+                    <div class="detail-box">
+                        <p>Lancement des dés de charge (2D6) pour les unités souhaitant engager le combat rapproché. Verrouillage des cibles au corps-à-corps.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exp-card">
+                <div class="exp-content">
+                    <div class="exp-header-main">
+                        <div>
+                            <h3 class="gold-text">Phase de Combat</h3>
+                            <p class="project-category">Mêlée Sanglante</p>
+                        </div>
+                    </div>
+                    <div class="detail-box">
+                        <p>Résolution des attaques de mêlée. Les unités ayant chargé frappent en premier, suivies par l'alternance des unités engagées.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="terminal" style="text-align: center;">
+            > FIN DE LA SÉQUENCE DE TOUR. RÉPÉTITION DU CYCLE...
+        </div>
+    </div>
+
+    <script>
+        fetch('navbar2.html').then(res => res.text()).then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+    </script>
+</body>
+</html>

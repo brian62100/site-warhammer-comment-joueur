@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archives des Factions | WH40K</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="container">
+        <header>
+            <h1 class="highlight">Archives de l'Adeptus</h1>
+            <p class="intro-text" style="text-align: center;">Sélectionnez une faction pour extraire les données tactiques.</p>
+        </header>
+
+        <div class="main-grid">
+            <a href="space-marines-hub.html" style="text-decoration: none;">
+                <div class="card faction-card active-faction" style="border-left: 4px solid var(--primary-gold);">
+                    <div class="project-image-placeholder" style="background: url('https://www.warhammer-community.com/wp-content/uploads/2023/05/9vXWf1P2L0k5G6F7.jpg'); background-size: cover;">
+                        SM
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Imperium // Adeptus Astartes</span>
+                        <h3 class="gold-text">SPACE MARINES</h3>
+                        <p>Les Anges de la Mort de l'Empereur. Guerriers transhumains d'élite.</p>
+                        <span class="highlight">> OUVRIR LES ARCHIVES DES CHAPITRES</span>
+                    </div>
+                </div>
+            </a>
+            
+
+            <div class="card faction-card disabled" style="opacity: 0.4; cursor: not-allowed;">
+                <div class="project-image-placeholder">???</div>
+                <div class="project-content">
+                    <span class="project-category">Inconnu // Xenos</span>
+                    <h3 class="gold-text">TYRANIDES</h3>
+                    <p>Données cryptées par l'Inquisition...</p>
+                    <span style="color: var(--imperial-red);">[ACCÈS REFUSÉ]</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        fetch('navbar.html').then(res => res.text()).then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+    </script>
+</body>
+</html>

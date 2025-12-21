@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocole de Manœuvre | WH40K V10</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;500&family=Cinzel:wght@700&family=Exo+2:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="container">
+        <header>
+            <h1 class="highlight">Phase de Mouvement</h1>
+            <div class="terminal">
+                > Calcul des vecteurs de déplacement...<br>
+                > Activation des moteurs de foulée et réacteurs dorsaux...<br>
+                > <span class="gold-text">STATUT : POSITIONNEMENT EN COURS</span>
+            </div>
+        </header>
+
+        <section class="experience-stack">
+            <div class="exp-card">
+                <div class="exp-content">
+                    <h3 class="gold-text">TYPES DE DÉPLACEMENT PRINCIPAL</h3>
+                    <div class="exp-details-grid">
+                        <div class="detail-box">
+                            <h4>Mouvement Normal</h4>
+                            <p>Distance max = <span class="highlight">Caractéristique (M)</span>.</p>
+                            <p>Autorise : Tir et Charge.</p>
+                        </div>
+                        <div class="detail-box">
+                            <h4>Avancer (Advance)</h4>
+                            <p>Distance = <span class="highlight">(M) + 1D6</span>.</p>
+                            <p>Restriction : Pas de Tir (sauf [ASSAULT]) ni de Charge.</p>
+                        </div>
+                    </div>
+                    <div class="detail-box" style="margin-top:15px;">
+                        <h4>Retraite (Fall Back)</h4>
+                        <p>Quitter le contact ennemi. Pas de tir (sauf [PISTOL]) ni de charge ce tour.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exp-card">
+                <div class="exp-content">
+                    <h3 class="gold-text">RÈGLES DE PLACEMENT</h3>
+                    <div class="detail-box">
+                        <ul class="task-list">
+                            <li><span class="highlight">Engagement :</span> Ne pas s'approcher à moins de 1" d'un ennemi (hors charge/retraite).</li>
+                            <li><span class="highlight">Vol [FLY] :</span> Ignore les figurines et les décors lors du transit.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exp-card">
+                <div class="exp-content">
+                    <h3 class="gold-text">DÉPLOIEMENTS SPÉCIAUX</h3>
+                    <div class="detail-box">
+                        <ul class="task-list">
+                            <li><span class="highlight">Arrivée des Réserves :</span> Déploiement [DEEP STRIKE] en fin de phase.</li>
+                            <li><span class="highlight">Transports :</span> Embarquer/Débarquer des unités (le débarquement compte comme un mvt normal).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="phase-de-tir.html" class="btn-40k" style="text-decoration: none;">INITIALISER : PHASE DE TIR >></a>
+        </div>
+    </div>
+
+    <script>
+        fetch('navbar2.html').then(res => res.text()).then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+    </script>
+</body>
+</html>
+

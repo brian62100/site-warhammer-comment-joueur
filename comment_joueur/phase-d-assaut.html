@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocole d'Assaut | WH40K V10</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="container">
+        <header>
+            <h1 class="highlight">Phase d'Assaut</h1>
+            <div class="terminal">
+                > Analyse des distances d'engagement...<br>
+                > Calcul des vecteurs d'impact...<br>
+                > <span class="gold-text">SÉQUENCE : CHARGE_INITIATED</span>
+            </div>
+        </header>
+
+        <section class="experience-stack">
+            <div class="exp-card">
+                <div class="exp-content">
+                    <h3 class="gold-text">DÉCLARATION D'ASSAUT</h3>
+                    <div class="detail-box">
+                        <ul class="task-list">
+                            <li><span class="highlight">Portée :</span> Cible à moins de 12" (30cm).</li>
+                            <li><span class="highlight">État :</span> L'unité ne doit pas avoir fait de Retraite ce tour.</li>
+                            <li><span class="highlight">Visibilité :</span> Ligne de vue requise vers au moins une figurine cible.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exp-card">
+                <div class="exp-content">
+                    <h3 class="gold-text">JET ET MOUVEMENT D'ASSAUT</h3>
+                    <div class="exp-details-grid">
+                        <div class="detail-box">
+                            <h4>Le Jet (2D6)</h4>
+                            <p>Le résultat doit être suffisant pour atteindre le contact de base.</p>
+                            <p class="highlight">> Échec = L'unité reste immobile.</p>
+                        </div>
+                        <div class="detail-box">
+                            <h4>Le Mouvement</h4>
+                            <p>Au moins une figurine doit finir au <span class="highlight">contact de base</span>.</p>
+                            <p>Respect de la cohésion d'unité obligatoire.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exp-card">
+                <div class="exp-sidebar">
+                    <div class="exp-icon">!</div>
+                </div>
+                <div class="exp-content">
+                    <h3 class="gold-text">RÉSERVES TACTIQUES</h3>
+                    <div class="detail-box">
+                        <p>Les unités arrivant de <span class="highlight">[DEEP STRIKE]</span> ou réserves peuvent charger durant le même tour (sauf contre-ordre spécifique).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="phase-de-combat.html" class="btn-40k" style="text-decoration: none;">INITIALISER : PHASE DE COMBAT >></a>
+        </div>
+    </div>
+
+    <script>
+        fetch('navbar2.html').then(res => res.text()).then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+    </script>
+</body>
+</html>

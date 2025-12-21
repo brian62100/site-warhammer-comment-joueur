@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warhammer 40k | Archive Tactique</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+    <div class="container">
+        <h1>Initialisation du <span class="highlight">Cogitator</span></h1>
+        
+        <div class="terminal">
+            > Accès autorisé...<br>
+            > Chargement des données tactiques...<br>
+            > <span class="highlight">Omnissie soit loué.</span>
+        </div>
+
+        <div class="main-grid">
+            <div class="card">
+                <h3>Règles de Base</h3>
+                <p>Maîtrisez le déroulement des tours pour écraser vos ennemis.</p>
+                <a href="#" class="highlight" style="text-decoration: none;">> CONSULTER_LES_PROTOCOLES</a>
+            </div>
+
+            <div class="card">
+                <h3>Analyse de Faction</h3>
+                <p>Étudiez les forces et faiblesses de chaque armée.</p>
+                <div style="margin-top:10px;">
+                    <span class="highlight">[Imperium]</span>
+                    <span class="highlight">[Chaos]</span>
+                    <span class="highlight">[Xenos]</span>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn-40k">Activer le Protocole de Combat</button>
+    </div>
+    <script>
+        // Chargement de la navbar
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

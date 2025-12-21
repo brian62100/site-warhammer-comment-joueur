@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocole de Mêlée | WH40K V10</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="container">
+        <header>
+            <h1 class="highlight">Phase de Combat</h1>
+            <div class="terminal">
+                > Engagement au corps-à-corps détecté...<br>
+                > Activation des lames énergétiques et tronçonneuses...<br>
+                > <span class="gold-text">POUR L'OMNISSIE, ÉCRASEZ-LES.</span>
+            </div>
+        </header>
+
+        <section class="experience-stack">
+            <div class="exp-card">
+                <div class="exp-content">
+                    <h3 class="gold-text">SÉQUENCE D'ACTIVATION</h3>
+                    <div class="detail-box">
+                        <p>Activation alternée entre les deux joueurs.</p>
+                        <ul class="task-list">
+                            <li><span class="highlight">Éligibilité :</span> Unités ayant chargé ou déjà engagées.</li>
+                            <li><span class="highlight">Ordre :</span> Le joueur actif commence, puis alternance.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exp-card">
+                <div class="exp-content">
+                    <h3 class="gold-text">MOUVEMENT DE CONSOLIDATION</h3>
+                    <div class="detail-box">
+                        <p>Déplacement de <span class="highlight">3 pouces (3")</span> maximum pour se rapprocher de l'ennemi le plus proche ou d'un objectif.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exp-card">
+                <div class="exp-content">
+                    <h3 class="gold-text">RÉSOLUTION DES ATTAQUES</h3>
+                    <div class="exp-details-grid">
+                        <div class="detail-box">
+                            <h4>A : Toucher (Hit)</h4>
+                            <p>Jet ≥ <span class="highlight">Capacité de Combat (CC)</span>.</p>
+                            <p>[UNWIELDY] : Relances de 1 impossibles.</p>
+                        </div>
+                        <div class="detail-box">
+                            <h4>B : Blesser (Wound)</h4>
+                            <p>Force vs Endurance.</p>
+                            <div class="tags"><span>[LETHAL HITS]</span> <span>[ANTI-VÉHICULE]</span></div>
+                        </div>
+                    </div>
+                    <div class="exp-details-grid" style="margin-top:15px;">
+                        <div class="detail-box">
+                            <h4>C : Sauvegarde</h4>
+                            <p>L'ennemi tente de parer (incluant la PA de l'arme).</p>
+                        </div>
+                        <div class="detail-box">
+                            <h4>D : Dégâts</h4>
+                            <p>Application des dommages et retrait des pertes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="terminal" style="text-align: center; margin-top: 40px;">
+            > FIN DU TOUR DE JOUEUR. PASSAGE AU TOUR SUIVANT...
+        </div>
+    </div>
+
+    <script>
+        fetch('navbar2.html').then(res => res.text()).then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+    </script>
+</body>
+</html>

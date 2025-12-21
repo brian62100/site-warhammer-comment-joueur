@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codex : Ultramarines</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    
+
+    <div class="container">
+        <header style="border-left: 5px solid #005ab2; padding-left: 20px;">
+            <h1 style="color: #005ab2; margin-bottom: 0;">ULTRAMARINES</h1>
+            <p class="gold-text">"Courage et Honneur !"</p>
+        </header>
+
+        <div class="terminal" style="margin: 30px 0;">
+            <p><span class="highlight">APTITUDE DE FACTION :</span> **Serment de l'Instant (Oath of Moment)**</p>
+            <p>Au début de votre phase de Commandement, choisissez une unité ennemie. Jusqu'au début de votre prochaine phase de Commandement, chaque fois qu'une figurine de votre armée avec cette aptitude attaque cette cible, vous pouvez relancer le jet de Touche.</p>
+        </div>
+
+
+        <section class="experience-stack">
+            <div class="main-grid">
+                <a href="um-regles.html" class="category-btn"><div class="card"><h3>Règles</h3></div></a>
+                <a href="um-infanterie.html" class="category-btn"><div class="card"><h3>INFANTERIE</h3></div></a>
+                <a href="um-vehicules.html" class="category-btn"><div class="card"><h3>VÉHICULES TERRESTRES</h3></div></a>
+                <a href="um-aerien.html" class="category-btn"><div class="card"><h3>AÉRIEN</h3></div></a>
+                <a href="um-heros.html" class="category-btn"><div class="card"><h3>HÉROS</h3></div></a>
+            </div>
+        </section>
+
+
+    <script>
+        fetch('navbar.html').then(res => res.text()).then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+    </script>
+</body>
+</html>

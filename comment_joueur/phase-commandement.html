@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocole de Commandement | WH40K V10</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;500&family=Cinzel:wght@700&family=Exo+2:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="container">
+        <header>
+            <h1 class="highlight">Phase de Commandement</h1>
+            <div class="terminal">
+                > Initialisation du flux de données tactiques...<br>
+                > Détection des signatures de commandement sur le champ de bataille...<br>
+                > <span class="gold-text">Séquence Prioritaire 01 : COMMAND_PHASE_START</span>
+            </div>
+        </header>
+
+        <section class="experience-stack">
+            <div class="exp-card">
+                <div class="exp-content">
+                    <div class="exp-header-main">
+                        <div>
+                            <h3 class="gold-text">DÉTERMINATION DES CIBLES DE FACTION</h3>
+                            <p class="project-category">Aptitudes de Début de Phase</p>
+                        </div>
+                    </div>
+                    <div class="detail-box">
+                        <p>Activation des règles de Faction fondamentales. C'est le moment d'appliquer les protocoles spécifiques à votre armée avant toute action motrice.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exp-card">
+                <div class="exp-content">
+                    <div class="exp-header-main">
+                        <div>
+                            <h3 class="gold-text">ALLOCATION DES RESSOURCES (PC)</h3>
+                            <p class="project-category">Monnaie Tactique</p>
+                        </div>
+                    </div>
+                    <div class="exp-details-grid">
+                        <div class="detail-box">
+                            <h4>Génération de PC</h4>
+                            <ul class="task-list">
+                                <li>Chaque joueur reçoit <span class="highlight">1 PC</span>.</li>
+                                <li>Le gain est effectif même sans figurines sur la table.</li>
+                                <li>Limite maximale : 6 PC en réserve à la fin de cette étape.</li>
+                            </ul>
+                        </div>
+                        <div class="detail-box">
+                            <h4>Usage des Stratagèmes</h4>
+                            <p>Dépensez vos PC pour activer des protocoles spéciaux (Combat, Armée ou Détachement).</p>
+                            <p class="highlight">> Un même stratagème ne peut être utilisé qu'une seule fois par phase.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exp-card">
+                <div class="exp-content">
+                    <div class="exp-header-main">
+                        <div>
+                            <h3 class="gold-text">PROTOCOLES DE FIN DE PHASE</h3>
+                            <p class="project-category">Résolution & Expiration</p>
+                        </div>
+                    </div>
+                    <div class="detail-box">
+                        <ul class="task-list">
+                            <li><span class="highlight">Marqueurs d'Objectifs :</span> Décompte des points et contrôle du terrain.</li>
+                            <li><span class="highlight">Effets Continus :</span> Les règles expirant "à la fin de la phase de commandement" s'arrêtent ici.</li>
+                            <li><span class="highlight">Tests de Choc :</span> Gestion des marqueurs appliqués par les unités spécifiques.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="phase-mouvement.html" class="btn-40k" style="text-decoration: none;">INITIALISER : PHASE DE MOUVEMENT >></a>
+        </div>
+    </div>
+
+    <script>
+        fetch('navbar2.html').then(res => res.text()).then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+    </script>
+</body>
+</html>
