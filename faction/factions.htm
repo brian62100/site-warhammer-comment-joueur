@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Archives des Factions | WH40K</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <div id="navbar-placeholder"></div>
@@ -16,7 +16,7 @@
         </header>
 
         <div class="main-grid">
-            <a href="space-marines-hub.html" style="text-decoration: none;">
+            <a href="space-marines-hub.htm" style="text-decoration: none;">
                 <div class="card faction-card active-faction" style="border-left: 4px solid var(--primary-gold);">
                     <div class="project-image-placeholder" style="background: url('https://www.warhammer-community.com/wp-content/uploads/2023/05/9vXWf1P2L0k5G6F7.jpg'); background-size: cover;">
                         SM
@@ -44,7 +44,7 @@
     </div>
 
     <script>
-        fetch('navbar.html').then(res => res.text()).then(data => {
+        fetch('navbar.htm').then(res => res.text()).then(data => {
             document.getElementById('navbar-placeholder').innerHTML = data;
         });
     </script>

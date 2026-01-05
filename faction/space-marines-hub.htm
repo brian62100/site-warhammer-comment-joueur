@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Sélection du Chapitre | Adeptus Astartes</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <div id="navbar-placeholder"></div>
@@ -19,7 +19,7 @@
         </header>
 
         <div class="main-grid">
-            <a href="ultramarines-presentation.html" class="category-btn">
+            <a href="ultramarine/ultramarines-presentation.htm" class="category-btn">
                 <div class="card" style="border-bottom: 3px solid #005ab2;">
                     <img src="https://warhammer40000.com/wp-content/uploads/2023/05/40k_sm_ultramarines_logo.png" alt="Icone UM" style="width: 50px; margin-bottom: 10px;">
                     <h3 style="color: #005ab2;">ULTRAMARINES</h3>
@@ -39,12 +39,12 @@
         </div>
 
         <div style="text-align: center; margin-top: 30px;">
-            <a href="factions.html" class="highlight" style="text-decoration: none;"><< Retour aux Factions</a>
+            <a href="factions.htm" class="highlight" style="text-decoration: none;"><< Retour aux Factions</a>
         </div>
     </div>
 
     <script>
-        fetch('navbar.html').then(res => res.text()).then(data => {
+        fetch('navbar.htm').then(res => res.text()).then(data => {
             document.getElementById('navbar-placeholder').innerHTML = data;
         });
     </script>

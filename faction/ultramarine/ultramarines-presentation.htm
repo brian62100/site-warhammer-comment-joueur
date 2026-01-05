@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Codex : Ultramarines</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
     <div id="navbar-placeholder"></div>
@@ -25,17 +25,17 @@
 
         <section class="experience-stack">
             <div class="main-grid">
-                <a href="um-regles.html" class="category-btn"><div class="card"><h3>Règles</h3></div></a>
-                <a href="um-infanterie.html" class="category-btn"><div class="card"><h3>INFANTERIE</h3></div></a>
-                <a href="um-vehicules.html" class="category-btn"><div class="card"><h3>VÉHICULES TERRESTRES</h3></div></a>
-                <a href="um-aerien.html" class="category-btn"><div class="card"><h3>AÉRIEN</h3></div></a>
-                <a href="um-heros.html" class="category-btn"><div class="card"><h3>HÉROS</h3></div></a>
+                <a href="um-regles.htm" class="category-btn"><div class="card"><h3>Règles</h3></div></a>
+                <a href="um-infanterie.htm" class="category-btn"><div class="card"><h3>INFANTERIE</h3></div></a>
+                <a href="um-vehicules.htm" class="category-btn"><div class="card"><h3>VÉHICULES TERRESTRES</h3></div></a>
+                <a href="um-aerien.htm" class="category-btn"><div class="card"><h3>AÉRIEN</h3></div></a>
+                <a href="um-heros.htm" class="category-btn"><div class="card"><h3>HÉROS</h3></div></a>
             </div>
         </section>
 
 
     <script>
-        fetch('navbar.html').then(res => res.text()).then(data => {
+        fetch('navbar.htm').then(res => res.text()).then(data => {
             document.getElementById('navbar-placeholder').innerHTML = data;
         });
     </script>
