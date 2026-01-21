@@ -7,13 +7,21 @@ body {
     color: #f0f0f0;
     margin: 0;
     padding: 0;
+    padding-top: 70px; /* espace pour navbar fixe */
 }
 
 /* =============================================== */
-/* NAVBAR PLACEHOLDER                               */
+/* NAVBAR FIXE EN HAUT                              */
 /* =============================================== */
 #navbar-placeholder {
-    margin-bottom: 20px;
+    position: fixed;  /* navbar toujours visible */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+    background-color: #1c1c1c;
+    border-bottom: 2px solid #005ab2;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.7);
 }
 
 /* =============================================== */
@@ -23,6 +31,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    position: relative; /* pour ancrer flèches */
 }
 
 /* =============================================== */
@@ -210,14 +219,91 @@ h1, h2, h3, h4 {
 }
 
 /* =============================================== */
+/* BOUTON RETOUR VEHICULE - ALIGNÉ À GAUCHE        */
+/* =============================================== */
+.vehicule-back {
+    margin: 20px 0;
+    text-align: left; /* aligné à gauche */
+}
+
+.back-vehicule-button,
+.back-vehicule-button:link,
+.back-vehicule-button:visited {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffd966;
+    background: linear-gradient(
+        145deg,
+        rgba(0, 90, 178, 0.25),
+        rgba(0, 0, 0, 0.8)
+    );
+    border: 2px solid #005ab2;
+    border-radius: 8px;
+    box-shadow:
+        inset 0 0 10px rgba(0, 90, 178, 0.5),
+        0 4px 12px rgba(0,0,0,0.6);
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.back-vehicule-button:hover {
+    background: linear-gradient(
+        145deg,
+        rgba(0, 90, 178, 0.5),
+        rgba(0, 0, 0, 0.95)
+    );
+    box-shadow:
+        inset 0 0 12px rgba(0, 90, 178, 0.7),
+        0 6px 18px rgba(0,0,0,0.7);
+    transform: translateY(-2px);
+    color: #fff59d;
+}
+
+/* =============================================== */
+/* FLECHES DE NAVIGATION - VEHICULES               */
+/* =============================================== */
+.nav-arrow {
+    position: absolute;      /* Absolue par rapport au container */
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 12px 18px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: gold;
+    background: rgba(0, 90, 178, 0.3);
+    border: 1px solid #005ab2;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    transition: all 0.25s ease;
+    z-index: 999;
+}
+
+.nav-arrow.left {
+    left: 0;  
+    margin-left: -10px; 
+}
+
+.nav-arrow.right {
+    right: 0;  
+    margin-right: -10px; 
+}
+
+.nav-arrow:hover {
+    background: rgba(0, 90, 178, 0.6);
+    box-shadow: 0 0 15px rgba(0,90,178,0.8);
+    color: #ffd966;
+}
+
+/* =============================================== */
 /* BOUTON RETOUR CODEX ULTRAMARINES                 */
-/* =============================================== */
-/* =============================================== */
-/* BOUTON RETOUR CODEX ULTRAMARINES - ALIGNÉ À GAUCHE */
 /* =============================================== */
 .codex-back {
     margin: 20px 0;
-    text-align: left; /* bouton aligné à gauche */
+    text-align: left; /* aligné à gauche pour cohérence Infanterie */
 }
 
 .back-button,
@@ -261,22 +347,25 @@ h1, h2, h3, h4 {
     color: #ffd966; /* doré clair au survol */
 }
 
-
 /* =============================================== */
 /* RESPONSIVE / ADAPTATIF                            */
 /* =============================================== */
 @media screen and (max-width: 768px) {
-    .vehicle-card {
-        width: 45%;
-    }
-    .unit-card {
+    .vehicle-card, .unit-card {
         width: 45%;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .vehicle-card,
-    .unit-card {
+    .vehicle-card, .unit-card {
         width: 90%;
+    }
+
+    .nav-arrow.left { left: 10px; }
+    .nav-arrow.right { right: 10px; }
+
+    .back-vehicule-button {
+        padding: 10px 18px;
+        font-size: 0.85rem;
     }
 }
