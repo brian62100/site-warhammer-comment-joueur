@@ -1,52 +1,87 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Archives des Factions | WH40K</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Archives des Factions | WH40K</title>
+
+<!-- Style global -->
+<link rel="stylesheet" href="../css/style.css">
+
+<!-- Style spécifique page Factions -->
+<link rel="stylesheet" href="../css/factions.css">
 </head>
+
 <body>
+
     <div id="navbar-placeholder"></div>
 
-    <div class="container">
-        <header>
-            <h1 class="highlight">Archives de l'Adeptus</h1>
-            <p class="intro-text" style="text-align: center;">Sélectionnez une faction pour extraire les données tactiques.</p>
-        </header>
+<!-- Header -->
+<header class="page-header">
+    <h1 class="highlight">Archives de l'Adeptus</h1>
+    <p class="intro-text">Sélectionnez une faction pour extraire les données tactiques.</p>
+</header>
 
-        <div class="main-grid">
-            <a href="space-marines-hub.htm" style="text-decoration: none;">
-                <div class="card faction-card active-faction" style="border-left: 4px solid var(--primary-gold);">
-                    <div class="project-image-placeholder" style="background: url('images/logo.jpg'); background-size: cover;">
-                        SM
-                    </div>
-                    <div class="project-content">
-                        <span class="project-category">Imperium // Adeptus Astartes</span>
-                        <h3 class="gold-text">SPACE MARINES</h3>
-                        <p>Les Anges de la Mort de l'Empereur. Guerriers transhumains d'élite.</p>
-                        <span class="highlight">> OUVRIR LES ARCHIVES DES CHAPITRES</span>
-                    </div>
-                </div>
-            </a>
-            
+<!-- Grid des factions -->
+<main class="main-grid">
 
-            <div class="card faction-card disabled" style="opacity: 0.4; cursor: not-allowed;">
-                <div class="project-image-placeholder">???</div>
-                <div class="project-content">
-                    <span class="project-category">Inconnu // Xenos</span>
-                    <h3 class="gold-text">TYRANIDES</h3>
-                    <p>Données cryptées par l'Inquisition...</p>
-                    <span style="color: var(--imperial-red);">[ACCÈS REFUSÉ]</span>
-                </div>
-            </div>
-        </div>
+<!-- Space Marines -->
+<a href="space-marines-hub.htm" class="card faction ultramarines">
+    <div class="project-image-placeholder" 
+         style="background-image:url('../Images/Logo.png');"></div>
+    <div class="project-content">
+        <span class="project-category">Imperium // Adeptus Astartes</span>
+        <h3 class="gold-text">SPACE MARINES</h3>
+        <p>Les Anges de la Mort de l'Empereur. Guerriers transhumains d'élite.</p>
+        <span class="highlight">> OUVRIR LES ARCHIVES DES CHAPITRES</span>
     </div>
+</a>
 
-    <script>
-        fetch('navbar.htm').then(res => res.text()).then(data => {
-            document.getElementById('navbar-placeholder').innerHTML = data;
-        });
-    </script>
+<!-- Tyranides -->
+<a href="#" class="card faction tyranides disabled">
+    <div class="project-image-placeholder" 
+         style="background-image:url('images/logo-tyranides.jpg');"></div>
+    <div class="project-content">
+        <span class="project-category">Xenos // Inconnu</span>
+        <h3 class="gold-text">TYRANIDES</h3>
+        <p>Données cryptées par l'Inquisition...</p>
+        <span class="access-denied">[ACCÈS REFUSÉ]</span>
+    </div>
+</a>
+
+<!-- Necrons -->
+<a href="#" class="card faction necrons disabled">
+    <div class="project-image-placeholder" 
+         style="background-image:url('images/logo-necrons.jpg');"></div>
+    <div class="project-content">
+        <span class="project-category">Xenos // Nécron</span>
+        <h3 class="gold-text">NECRONS</h3>
+        <p>Éveil des anciennes machines mortelles.</p>
+        <span class="access-denied">[ACCÈS REFUSÉ]</span>
+    </div>
+</a>
+
+<!-- Tau -->
+<a href="#" class="card faction tau disabled">
+    <div class="project-image-placeholder" 
+         style="background-image:url('images/logo-tau.jpg');"></div>
+    <div class="project-content">
+        <span class="project-category">Xenos // Empire Tau</span>
+        <h3 class="gold-text">TAU</h3>
+        <p>Techno-guerriers prônant l’ascension du Bien Suprême.</p>
+        <span class="access-denied">[ACCÈS REFUSÉ]</span>
+    </div>
+</a>
+
 </body>
+
+<script>
+        // Chargement de la navbar
+        fetch('navbar.htm')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+    </script>
+
 </html>

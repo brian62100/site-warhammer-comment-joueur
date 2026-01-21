@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Datasheet : Escouade Tactique</title>
+    <link rel="stylesheet" href="../../../css/fiche.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="container">
+        <div class="datasheet">
+            <div class="datasheet-header">
+                <h2>Escouade Tactique</h2>
+                <span class="tag">Infanterie, Ultramarines</span>
+            </div>
+
+            <!-- STATS TABLE -->
+            <div class="stats-table-wrapper">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>Mouvement</th>
+                            <th>Endurance</th>
+                            <th>Sauvegarde</th>
+                            <th>Invulnérable</th>
+                            <th>PV</th>
+                            <th>Commandement</th>
+                            <th>Objectif (CO)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>6"</td>
+                            <td>4</td>
+                            <td>3+</td>
+                            <td>-</td>
+                            <td>2</td>
+                            <td>7</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ARSENAL DE TIR -->
+            <h4 class="highlight">ARSENAL DE TIR</h4>
+            <div class="stats-table-wrapper">
+                <table class="weapon-table">
+                    <thead>
+                        <tr>
+                            <th>Arme</th>
+                            <th>Portée</th>
+                            <th>Attaques</th>
+                            <th>Touche</th>
+                            <th>Force</th>
+                            <th>Pénétration</th>
+                            <th>Dégâts</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Bolter</td>
+                            <td>24"</td>
+                            <td>2</td>
+                            <td>3+</td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>Tir</td>
+                        </tr>
+                        <tr>
+                            <td>Fusil Stalker Bolt</td>
+                            <td>30"</td>
+                            <td>2</td>
+                            <td>3+</td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>Tir</td>
+                        </tr>
+                        <tr>
+                            <td>Fusil Auto Bolt</td>
+                            <td>24"</td>
+                            <td>3</td>
+                            <td>3+</td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>Tir</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ARSENAL DE MÊLÉE -->
+            <h4 class="highlight">ARSENAL DE MÊLÉE</h4>
+            <div class="stats-table-wrapper">
+                <table class="weapon-table">
+                    <thead>
+                        <tr>
+                            <th>Arme</th>
+                            <th>Attaques</th>
+                            <th>Touche</th>
+                            <th>Force</th>
+                            <th>Pénétration</th>
+                            <th>Dégâts</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Epée Tronçonneuse</td>
+                            <td>3</td>
+                            <td>3+</td>
+                            <td>Strength +1</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>Mêlée</td>
+                        </tr>
+                        <tr>
+                            <td>Couteau de Combat</td>
+                            <td>1</td>
+                            <td>4+</td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>Mêlée</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- APTITUDES TACTIQUES -->
+            <h4 class="highlight">APTITUDES TACTIQUES</h4>
+            <div class="terminal">
+                - Tir Discipline : relance 1 pour toucher avec les Bolters.<br>
+                - Combat Tactique : les unités à moins de 6" peuvent tirer après déplacement.<br>
+                - Déploiement Ultramarine : +1 Commandement pour les ordres reçus dans un tour.
+            </div>
+
+            <!-- DICTIONNAIRE DES ARMES -->
+            <h4 class="highlight">DICTIONNAIRE DES ARMES</h4>
+            <div class="terminal">
+                <strong>Bolter :</strong> Arme à tir rapide, portée 24", 2 attaques, Force 4, PA 0, Dégâts 1.<br>
+                <strong>Fusil Stalker Bolt :</strong> Fusil de précision, portée 30", 2 attaques, Force 4, PA 0, Dégâts 1.<br>
+                <strong>Fusil Auto Bolt :</strong> Fusil automatique, portée 24", 3 attaques, Force 4, PA 0, Dégâts 1.<br>
+                <strong>Epée Tronçonneuse :</strong> Arme de mêlée lourde, +1 Force, PA 2, Dégâts 1.<br>
+                <strong>Couteau de Combat :</strong> Arme de mêlée légère, Force 4, PA 0, Dégâts 1.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        fetch('navbar.htm')
+            .then(res => res.text())
+            .then(data => { document.getElementById('navbar-placeholder').innerHTML = data; });
+    </script>
+</body>
+</html>

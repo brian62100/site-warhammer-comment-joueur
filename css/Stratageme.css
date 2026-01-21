@@ -1,0 +1,86 @@
+/* stratagemes.css */
+
+/* Reset de base pour le tableau */
+table {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    font-family: 'Arial', sans-serif;
+    background-color: #001f3f; /* bleu foncé Ultramarine */
+    color: gold; /* texte doré */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+caption {
+    caption-side: top;
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #005ab2; /* bleu vif Ultramarine */
+}
+
+thead th {
+    background-color: #005ab2;
+    color: gold;
+    padding: 12px;
+    font-size: 1em;
+    text-align: center;
+    border-bottom: 2px solid gold;
+}
+
+tbody td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid gold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #003366; /* bleu légèrement plus clair pour alternance */
+}
+
+tbody tr:hover {
+    background-color: #004080;
+    transform: scale(1.02);
+    transition: all 0.2s ease-in-out;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5em;
+    color: #005ab2;
+    text-shadow: 1px 1px 2px black;
+}
+
+/* Responsive pour mobile */
+@media screen and (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        display: none;
+    }
+
+    tbody tr {
+        margin-bottom: 15px;
+        border: 2px solid gold;
+        border-radius: 10px;
+        padding: 10px;
+        background-color: #003366;
+    }
+
+    tbody td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    tbody td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+        color: gold;
+    }
+}

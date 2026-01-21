@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>CHAPLAIN TERMINATOR | Ultramarines</title>
+    <link rel="stylesheet" href="../../../css/hero.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="container">
+        <header>
+            <h1 class="highlight">CHAPLAIN TERMINATOR</h1>
+            <p class="gold-text">Héraut de la Foi // Adeptus Astartes</p>
+        </header>
+
+        <div class="exp-card datasheet">
+            <div class="datasheet-header">
+                <h2 class="gold-text">CHAPLAIN TERMINATOR</h2>
+                <span class="tag">HÉROS, TERMINATOR, CHAPLAIN, ULTRAMARINES, COMBAT, IMPERIUM</span>
+            </div>
+
+            <div class="stats-table-wrapper">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>Mouvement</th>
+                            <th>Endurance</th>
+                            <th>Sauvegarde</th>
+                            <th>PV</th>
+                            <th>Commandement</th>
+                            <th>Objectif (CO)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>6 cm</td>
+                            <td>5</td>
+                            <td>2+</td>
+                            <td>5</td>
+                            <td>8+</td>
+                            <td>4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">ARMEMENT DE TIR</h4>
+            <div class="stats-table-wrapper">
+                <table class="weapon-table">
+                    <thead>
+                        <tr>
+                            <th>Arme</th>
+                            <th>Portée</th>
+                            <th>Attaques</th>
+                            <th>Touche</th>
+                            <th>Force</th>
+                            <th>Pénétration</th>
+                            <th>Dégâts</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Bolter jumelé</td>
+                            <td>30 cm</td>
+                            <td>4</td>
+                            <td>3+</td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>[Tir rapide 2]</td>
+                        </tr>
+                        <tr>
+                            <td>Fusil d’assaut sacré</td>
+                            <td>24 cm</td>
+                            <td>3</td>
+                            <td>3+</td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>[Blessure morale]</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">ARMEMENT DE MÊLÉE</h4>
+            <div class="stats-table-wrapper">
+                <table class="weapon-table">
+                    <thead>
+                        <tr>
+                            <th>Arme</th>
+                            <th>Attaques</th>
+                            <th>Touche</th>
+                            <th>Force</th>
+                            <th>Pénétration</th>
+                            <th>Dégâts</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Crozius Arcanum</td>
+                            <td>5</td>
+                            <td>3+</td>
+                            <td>8</td>
+                            <td>-2</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Poing de force</td>
+                            <td>4</td>
+                            <td>3+</td>
+                            <td>9</td>
+                            <td>-3</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">APTITUDES DE COMBAT</h4>
+            <div class="terminal" style="font-size: 0.85rem;">
+                <p><span class="gold-text">[Aura de Foi] :</span> Les unités friendly à 6 cm ajoutent +1 à leur moral et sauvegarde invulnérable.</p>
+                <p><span class="gold-text">[Héroïque] :</span> Ignore tous les malus de mouvement imposés par les combats rapprochés et charges.</p>
+                <p><span class="gold-text">[Chaplain] :</span> Peut relancer un jet de moral ou de puissance spéciale par tour.</p>
+                <p><span class="gold-text">[Rites de guerre] :</span> Chaque fois qu’une unité friendly effectue une charge à moins de 6 cm du Chaplain, elle relance un dé pour toucher.</p>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">DICTIONNAIRE DES ARMES</h4>
+            <div class="terminal" style="font-size: 0.85rem; border-color: #005ab2;">
+                <p><span class="highlight">[Tir rapide 2] :</span> Si à la moitié de la portée de tir, ajoute 2 attaques supplémentaires.</p>
+                <p><span class="highlight">[Blessure morale] :</span> Lancer D6, sur un 6 inflige 1 blessure morale à la cible ennemie.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        fetch('navbar.htm').then(res => res.text()).then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+    </script>
+</body>
+</html>

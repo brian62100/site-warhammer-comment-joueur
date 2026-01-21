@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>BIBLIOTHÉCAIRE TERMINATOR | Ultramarines</title>
+    <link rel="stylesheet" href="../../../css/hero.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="container">
+        <header>
+            <h1 class="highlight">BIBLIOTHÉCAIRE TERMINATOR</h1>
+            <p class="gold-text">Psyker // Adeptus Astartes</p>
+        </header>
+
+        <div class="exp-card datasheet">
+            <div class="datasheet-header">
+                <h2 class="gold-text">BIBLIOTHÉCAIRE TERMINATOR</h2>
+                <span class="tag">HÉROS, TERMINATOR, PSYKER, ULTRAMARINES, COMBAT, IMPERIUM</span>
+            </div>
+
+            <div class="stats-table-wrapper">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>Mouvement</th>
+                            <th>Endurance</th>
+                            <th>Sauvegarde</th>
+                            <th>PV</th>
+                            <th>Commandement</th>
+                            <th>Objectif (CO)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>6 cm</td>
+                            <td>5</td>
+                            <td>2+</td>
+                            <td>6</td>
+                            <td>8+</td>
+                            <td>4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">ARMEMENT DE TIR</h4>
+            <div class="stats-table-wrapper">
+                <table class="weapon-table">
+                    <thead>
+                        <tr>
+                            <th>Arme</th>
+                            <th>Portée</th>
+                            <th>Attaques</th>
+                            <th>Touche</th>
+                            <th>Force</th>
+                            <th>Pénétration</th>
+                            <th>Dégâts</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Fusil d’assaut psychique</td>
+                            <td>24 cm</td>
+                            <td>3</td>
+                            <td>3+</td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>[Psyshot]</td>
+                        </tr>
+                        <tr>
+                            <td>Bolter jumelé</td>
+                            <td>30 cm</td>
+                            <td>4</td>
+                            <td>3+</td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>[Tir rapide 2]</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">ARMEMENT DE MÊLÉE</h4>
+            <div class="stats-table-wrapper">
+                <table class="weapon-table">
+                    <thead>
+                        <tr>
+                            <th>Arme</th>
+                            <th>Attaques</th>
+                            <th>Touche</th>
+                            <th>Force</th>
+                            <th>Pénétration</th>
+                            <th>Dégâts</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Épée énergétique</td>
+                            <td>5</td>
+                            <td>3+</td>
+                            <td>8</td>
+                            <td>-2</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Poing de force</td>
+                            <td>4</td>
+                            <td>3+</td>
+                            <td>9</td>
+                            <td>-3</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">APTITUDES DE COMBAT</h4>
+            <div class="terminal" style="font-size: 0.85rem;">
+                <p><span class="gold-text">[Psyker] :</span> Peut lancer un pouvoir psy par tour sur une unité friendly ou ennemie à 12 cm.</p>
+                <p><span class="gold-text">[Aura de protection] :</span> Les unités friendly à 6 cm bénéficient de +1 à la sauvegarde invulnérable.</p>
+                <p><span class="gold-text">[Maître du warp] :</span> Peut relancer un jet de puissance psy ou de dommage par tour.</p>
+                <p><span class="gold-text">[Héroïque] :</span> Ignore tous les malus de mouvement imposés par les combats rapprochés et charges.</p>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">DICTIONNAIRE DES ARMES</h4>
+            <div class="terminal" style="font-size: 0.85rem; border-color: #005ab2;">
+                <p><span class="highlight">[Psyshot] :</span> Lancer D6, sur un 6 inflige 2 blessures à la cible ennemie.</p>
+                <p><span class="highlight">[Tir rapide 2] :</span> Si à la moitié de la portée de tir, ajoute 2 attaques supplémentaires.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        fetch('navbar.htm').then(res => res.text()).then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+    </script>
+</body>
+</html>

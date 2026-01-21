@@ -1,0 +1,123 @@
+/* fiche.css - style Warhammer 40K grimdark */
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #1b1b1b;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.datasheet {
+    background-color: #121212;
+    border: 3px solid #003366;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+    padding: 25px;
+    transition: all 0.3s ease;
+}
+
+.datasheet:hover {
+    transform: scale(1.01);
+}
+
+.datasheet-header {
+    text-align: center;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.datasheet-header h2 {
+    font-size: 2rem;
+    color: gold;
+    text-shadow: 1px 1px 4px #000;
+    margin-bottom: 8px;
+}
+
+.datasheet-header .tag {
+    display: inline-block;
+    padding: 6px 18px;
+    background-color: #003366;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    text-transform: uppercase;
+}
+
+.stats-table-wrapper {
+    overflow-x: auto;
+}
+
+.stats-table, .weapon-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+}
+
+.stats-table th, .stats-table td,
+.weapon-table th, .weapon-table td {
+    border: 1px solid #003366;
+    padding: 8px;
+    text-align: center;
+}
+
+.stats-table th, .weapon-table th {
+    background-color: #003366;
+    color: gold;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.weapon-table tr:nth-child(even) {
+    background-color: #1a1a2e;
+}
+
+.weapon-table tr:nth-child(odd) {
+    background-color: #222238;
+}
+
+.highlight {
+    color: gold;
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-top: 25px;
+    display: block;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 4px;
+    text-transform: uppercase;
+}
+
+.terminal {
+    background-color: #222238;
+    border-left: 5px solid #003366;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #f0f0f0;
+}
+
+.terminal strong {
+    color: gold;
+}
+
+@media (max-width: 768px) {
+    .datasheet-header h2 {
+        font-size: 1.6rem;
+    }
+    .stats-table th, .stats-table td,
+    .weapon-table th, .weapon-table td {
+        padding: 6px;
+        font-size: 0.85rem;
+    }
+}

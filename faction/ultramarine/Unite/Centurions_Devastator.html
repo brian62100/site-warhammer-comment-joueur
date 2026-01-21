@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Datasheet : Centurions Devastator</title>
+    <link rel="stylesheet" href="../../../css/fiche.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="container">
+        <div class="datasheet">
+            <div class="datasheet-header">
+                <h2>Centurions Devastator</h2>
+                <span class="tag">Elite, Infanterie Lourde, Ultramarines</span>
+            </div>
+
+            <!-- STATS TABLE -->
+            <div class="stats-table-wrapper">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>Mouvement</th>
+                            <th>Endurance</th>
+                            <th>Sauvegarde</th>
+                            <th>Invulnérable</th>
+                            <th>PV</th>
+                            <th>Commandement</th>
+                            <th>Objectif (CO)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>6"</td>
+                            <td>5</td>
+                            <td>3+</td>
+                            <td>4+</td>
+                            <td>3</td>
+                            <td>8</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ARSENAL DE TIR -->
+            <h4 class="highlight">ARSENAL DE TIR</h4>
+            <div class="stats-table-wrapper">
+                <table class="weapon-table">
+                    <thead>
+                        <tr>
+                            <th>Arme</th>
+                            <th>Portée</th>
+                            <th>Attaques</th>
+                            <th>Touche</th>
+                            <th>Force</th>
+                            <th>Pénétration</th>
+                            <th>Dégâts</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Bolter Devastator</td>
+                            <td>24"</td>
+                            <td>3</td>
+                            <td>3+</td>
+                            <td>5</td>
+                            <td>-1</td>
+                            <td>2</td>
+                            <td>Tir</td>
+                        </tr>
+                        <tr>
+                            <td>Fusil Plasma</td>
+                            <td>24"</td>
+                            <td>2</td>
+                            <td>3+</td>
+                            <td>7</td>
+                            <td>-3</td>
+                            <td>2</td>
+                            <td>Tir</td>
+                        </tr>
+                        <tr>
+                            <td>Fusil Grav</td>
+                            <td>18"</td>
+                            <td>2</td>
+                            <td>3+</td>
+                            <td>6</td>
+                            <td>-2</td>
+                            <td>3</td>
+                            <td>Tir</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ARSENAL DE MÊLÉE -->
+            <h4 class="highlight">ARSENAL DE MÊLÉE</h4>
+            <div class="stats-table-wrapper">
+                <table class="weapon-table">
+                    <thead>
+                        <tr>
+                            <th>Arme</th>
+                            <th>Attaques</th>
+                            <th>Touche</th>
+                            <th>Force</th>
+                            <th>Pénétration</th>
+                            <th>Dégâts</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Poings Énergétiques</td>
+                            <td>3</td>
+                            <td>3+</td>
+                            <td>Force +2</td>
+                            <td>-3</td>
+                            <td>2</td>
+                            <td>Mêlée</td>
+                        </tr>
+                        <tr>
+                            <td>Grappin-Talon</td>
+                            <td>1</td>
+                            <td>3+</td>
+                            <td>5</td>
+                            <td>-1</td>
+                            <td>2</td>
+                            <td>Mêlée</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- APTITUDES TACTIQUES -->
+            <h4 class="highlight">APTITUDES TACTIQUES</h4>
+            <div class="terminal">
+                - Blindage Devastator : +1 Sauvegarde contre les tirs.<br>
+                - Tir Concentré : Peut relancer les touches ratées pour un seul tir par tour.<br>
+                - Déploiement Ultramarine : +1 Commandement pour les ordres reçus dans un tour.
+            </div>
+
+            <!-- DICTIONNAIRE DES ARMES -->
+            <h4 class="highlight">DICTIONNAIRE DES ARMES</h4>
+            <div class="terminal">
+                <strong>Bolter Devastator :</strong> Bolter lourd, Force 5, PA -1, Dégâts 2.<br>
+                <strong>Fusil Plasma :</strong> Tir puissant, Force 7, PA -3, Dégâts 2.<br>
+                <strong>Fusil Grav :</strong> Tir anti-élite, Force 6, PA -2, Dégâts 3.<br>
+                <strong>Poings Énergétiques :</strong> Mêlée lourde, Force +2, PA -3, Dégâts 2.<br>
+                <strong>Grappin-Talon :</strong> Arme de mêlée, Force 5, PA -1, Dégâts 2.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        fetch('navbar.htm')
+            .then(res => res.text())
+            .then(data => { document.getElementById('navbar-placeholder').innerHTML = data; });
+    </script>
+</body>
+</html>

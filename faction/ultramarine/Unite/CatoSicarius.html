@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>CATO SICARIUS | Ultramarines</title>
+    <link rel="stylesheet" href="../../../css/hero.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="container">
+        <header>
+            <h1 class="highlight">CATO SICARIUS</h1>
+            <p class="gold-text">Grand Capitaine // Adeptus Astartes</p>
+        </header>
+
+        <div class="exp-card datasheet">
+            <div class="datasheet-header">
+                <h2 class="gold-text">CATO SICARIUS</h2>
+                <span class="tag">HÉROS, CAPITAINE, ULTRAMARINES, COMBAT, IMPERIUM</span>
+            </div>
+
+            <div class="stats-table-wrapper">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>Mouvement</th>
+                            <th>Endurance</th>
+                            <th>Sauvegarde</th>
+                            <th>PV</th>
+                            <th>Commandement</th>
+                            <th>Objectif (CO)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>8 cm</td>
+                            <td>5</td>
+                            <td>2+</td>
+                            <td>5</td>
+                            <td>9+</td>
+                            <td>5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">ARMEMENT DE TIR</h4>
+            <div class="stats-table-wrapper">
+                <table class="weapon-table">
+                    <thead>
+                        <tr>
+                            <th>Arme</th>
+                            <th>Portée</th>
+                            <th>Attaques</th>
+                            <th>Touche</th>
+                            <th>Force</th>
+                            <th>Pénétration</th>
+                            <th>Dégâts</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Bolter</td>
+                            <td>30 cm</td>
+                            <td>3</td>
+                            <td>3+</td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>[Tir rapide]</td>
+                        </tr>
+                        <tr>
+                            <td>Pistolet plasma</td>
+                            <td>24 cm</td>
+                            <td>1</td>
+                            <td>3+</td>
+                            <td>7</td>
+                            <td>-3</td>
+                            <td>D6</td>
+                            <td>[Melta]</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">ARMEMENT DE MÊLÉE</h4>
+            <div class="stats-table-wrapper">
+                <table class="weapon-table">
+                    <thead>
+                        <tr>
+                            <th>Arme</th>
+                            <th>Attaques</th>
+                            <th>Touche</th>
+                            <th>Force</th>
+                            <th>Pénétration</th>
+                            <th>Dégâts</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Épée énergétique</td>
+                            <td>5</td>
+                            <td>3+</td>
+                            <td>8</td>
+                            <td>-3</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Poing de combat</td>
+                            <td>4</td>
+                            <td>3+</td>
+                            <td>9</td>
+                            <td>-3</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">APTITUDES DE COMBAT</h4>
+            <div class="terminal" style="font-size: 0.85rem;">
+                <p><span class="gold-text">[Maître du Combat] :</span> Cato relance un dé pour toucher pour chaque charge ou attaque rapprochée qu'il effectue.</p>
+                <p><span class="gold-text">[Aura de Commandement] :</span> Toutes les unités friendly à 6 cm ajoutent +1 à leur jet de moral.</p>
+                <p><span class="gold-text">[Héros Ultramarine] :</span> Ignore les effets de terrain difficiles lors de ses déplacements.</p>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">DICTIONNAIRE DES ARMES</h4>
+            <div class="terminal" style="font-size: 0.85rem; border-color: #005ab2;">
+                <p><span class="highlight">[Tir rapide] :</span> Si à la moitié de la portée de tir, ajoute 1 attaque supplémentaire.</p>
+                <p><span class="highlight">[Melta] :</span> Augmente les dégâts contre les unités blindées à courte portée.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        fetch('navbar.htm').then(res => res.text()).then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+    </script>
+</body>
+</html>

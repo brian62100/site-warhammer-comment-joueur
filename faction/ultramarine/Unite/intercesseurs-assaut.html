@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Datasheet : Escouade d’Intercesseurs d’Assaut</title>
+    <link rel="stylesheet" href="../../../css/fiche.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="container">
+        <div class="datasheet">
+            <div class="datasheet-header">
+                <h2>Escouade d’Intercesseurs d’Assaut</h2>
+                <span class="tag">Elite, Infanterie, Ultramarines, Réacteurs dorsaux</span>
+            </div>
+
+            <!-- STATS TABLE -->
+            <div class="stats-table-wrapper">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>Mouvement</th>
+                            <th>Endurance</th>
+                            <th>Sauvegarde</th>
+                            <th>Invulnérable</th>
+                            <th>PV</th>
+                            <th>Commandement</th>
+                            <th>Objectif (CO)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>8"</td>
+                            <td>4</td>
+                            <td>3+</td>
+                            <td>5+</td>
+                            <td>2</td>
+                            <td>7</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ARSENAL DE TIR -->
+            <h4 class="highlight">ARSENAL DE TIR</h4>
+            <div class="stats-table-wrapper">
+                <table class="weapon-table">
+                    <thead>
+                        <tr>
+                            <th>Arme</th>
+                            <th>Portée</th>
+                            <th>Attaques</th>
+                            <th>Touche</th>
+                            <th>Force</th>
+                            <th>Pénétration</th>
+                            <th>Dégâts</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Bolter d’Assaut</td>
+                            <td>24"</td>
+                            <td>2</td>
+                            <td>3+</td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>Tir</td>
+                        </tr>
+                        <tr>
+                            <td>Fusil Auto Bolt</td>
+                            <td>24"</td>
+                            <td>3</td>
+                            <td>3+</td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>Tir</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ARSENAL DE MÊLÉE -->
+            <h4 class="highlight">ARSENAL DE MÊLÉE</h4>
+            <div class="stats-table-wrapper">
+                <table class="weapon-table">
+                    <thead>
+                        <tr>
+                            <th>Arme</th>
+                            <th>Attaques</th>
+                            <th>Touche</th>
+                            <th>Force</th>
+                            <th>Pénétration</th>
+                            <th>Dégâts</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Epée Tronçonneuse</td>
+                            <td>3</td>
+                            <td>3+</td>
+                            <td>Force +1</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>Mêlée</td>
+                        </tr>
+                        <tr>
+                            <td>Couteau de Combat</td>
+                            <td>1</td>
+                            <td>4+</td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>Mêlée</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- APTITUDES TACTIQUES -->
+            <h4 class="highlight">APTITUDES TACTIQUES</h4>
+            <div class="terminal">
+                - Déploiement Aérien : peut se déplacer avant de tirer.<br>
+                - Discipline Ultramarine : +1 Commandement pour les ordres reçus.<br>
+                - Assaut Rapide : +2" au mouvement pour le premier tour.
+            </div>
+
+            <!-- DICTIONNAIRE DES ARMES -->
+            <h4 class="highlight">DICTIONNAIRE DES ARMES</h4>
+            <div class="terminal">
+                <strong>Bolter d’Assaut :</strong> Arme à tir rapide, portée 24", 2 attaques, Force 4, PA 0, Dégâts 1.<br>
+                <strong>Fusil Auto Bolt :</strong> Fusil automatique, portée 24", 3 attaques, Force 4, PA 0, Dégâts 1.<br>
+                <strong>Epée Tronçonneuse :</strong> Arme de mêlée lourde, Force +1, PA 2, Dégâts 1.<br>
+                <strong>Couteau de Combat :</strong> Arme de mêlée légère, Force 4, PA 0, Dégâts 1.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        fetch('navbar.htm')
+            .then(res => res.text())
+            .then(data => { document.getElementById('navbar-placeholder').innerHTML = data; });
+    </script>
+</body>
+</html>

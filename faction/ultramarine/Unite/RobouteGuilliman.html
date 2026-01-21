@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>ROBOUTE GUILLIMAN | Ultramarines</title>
+    <link rel="stylesheet" href="../../../css/hero.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="container">
+        <header>
+            <h1 class="highlight">ROBOUTE GUILLIMAN</h1>
+            <p class="gold-text">Primarque // Adeptus Astartes</p>
+        </header>
+
+        <div class="exp-card datasheet">
+            <div class="datasheet-header">
+                <h2 class="gold-text">ROBOUTE GUILLIMAN</h2>
+                <span class="tag">HÉROS, PRIMARQUE, ULTRAMARINES, COMBAT, STRATÉGIE, IMPERIUM</span>
+            </div>
+
+            <div class="stats-table-wrapper">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>Mouvement</th>
+                            <th>Endurance</th>
+                            <th>Sauvegarde</th>
+                            <th>PV</th>
+                            <th>Commandement</th>
+                            <th>Objectif (CO)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>12 cm</td>
+                            <td>6</td>
+                            <td>2+</td>
+                            <td>8</td>
+                            <td>9+</td>
+                            <td>5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">ARMEMENT DE TIR</h4>
+            <div class="stats-table-wrapper">
+                <table class="weapon-table">
+                    <thead>
+                        <tr>
+                            <th>Arme</th>
+                            <th>Portée</th>
+                            <th>Attaques</th>
+                            <th>Touche</th>
+                            <th>Force</th>
+                            <th>Pénétration</th>
+                            <th>Dégâts</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Bolter Primarque</td>
+                            <td>24 cm</td>
+                            <td>4</td>
+                            <td>3+</td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>[Tir rapide 1]</td>
+                        </tr>
+                        <tr>
+                            <td>Fusil plasma Primarque</td>
+                            <td>30 cm</td>
+                            <td>2</td>
+                            <td>3+</td>
+                            <td>7</td>
+                            <td>-3</td>
+                            <td>2</td>
+                            <td>[Explosif]</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">ARMEMENT DE MÊLÉE</h4>
+            <div class="stats-table-wrapper">
+                <table class="weapon-table">
+                    <thead>
+                        <tr>
+                            <th>Arme</th>
+                            <th>Attaques</th>
+                            <th>Touche</th>
+                            <th>Force</th>
+                            <th>Pénétration</th>
+                            <th>Dégâts</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Épée énergétique Primarque</td>
+                            <td>7</td>
+                            <td>3+</td>
+                            <td>10</td>
+                            <td>-3</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Poing énergétique</td>
+                            <td>6</td>
+                            <td>3+</td>
+                            <td>9</td>
+                            <td>-2</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">APTITUDES DE COMBAT</h4>
+            <div class="terminal" style="font-size: 0.85rem;">
+                <p><span class="gold-text">[Aura de Primarque] :</span> Toutes les unités friendly à 12 cm peuvent relancer un jet de moral ou de commandement raté.</p>
+                <p><span class="gold-text">[Maître Stratège] :</span> Une fois par tour, permet de relancer n’importe quel jet de Commandement ou de mouvement stratégique pour une unité friendly à 12 cm.</p>
+                <p><span class="gold-text">[Guerrier Suprême] :</span> +1 aux dégâts pour toutes les attaques de mêlée contre les unités ennemies d’élite ou monstrueuses.</p>
+                <p><span class="gold-text">[Héroïque] :</span> Ignore tous les malus de mouvement imposés par les combats rapprochés et charges.</p>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">DICTIONNAIRE DES ARMES</h4>
+            <div class="terminal" style="font-size: 0.85rem; border-color: #005ab2;">
+                <p><span class="highlight">[Tir rapide 1] :</span> Peut tirer une fois de plus si l’arme est à moitié portée.</p>
+                <p><span class="highlight">[Explosif] :</span> Cette arme inflige 1 blessure supplémentaire sur un 6 naturel.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        fetch('navbar.htm').then(res => res.text()).then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+/* ===================================================== */
+/* PAGE PRÉSENTATION ULTRAMARINES                        */
+/* ===================================================== */
+
+/* Container général */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 30px;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, rgba(0,90,178,0.05), rgba(0,90,178,0.15));
+    border-left: 5px solid #005ab2;
+    padding: 20px 30px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #005ab2;
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    margin: 0 0 5px 0;
+}
+
+header p.gold-text {
+    color: #d4af37;
+    font-family: 'Fira Code', monospace;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Terminal / codex block */
+.terminal {
+    background: #0a0e14;
+    border-left: 4px solid #005ab2;
+    padding: 20px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    box-shadow: inset 0 0 15px rgba(0,90,178,0.4);
+    color: #e6e8eb;
+    border-radius: 4px;
+}
+
+/* Highlight dans le terminal */
+.terminal .highlight {
+    color: #d4af37;
+    font-weight: 600;
+}
+
+/* Section experience-stack (cards) */
+.experience-stack {
+    margin-top: 30px;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+}
+
+/* Cards des sections */
+.card {
+    background: #0d1117;
+    border-left: 4px solid #005ab2;
+    border-radius: 6px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+    color: #d4af37;
+}
+
+.card h3 {
+    color: #005ab2;
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* Hover effet */
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 15px rgba(0,90,178,0.6);
+}
+
+/* Links */
+.category-btn {
+    text-decoration: none;
+}
+
+.category-btn .card h3 {
+    color: inherit;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+}
+
+/* ===================================================== */
+/* Bloc aptitude / description WH40K                    */
+/* ===================================================== */
+.codex-block {
+    background: rgba(0,0,0,0.2);      /* fond sombre mais pas trop */
+    border-left: 4px solid #005ab2;   /* accent bleu Ultramarines */
+    padding: 20px 25px;
+    margin: 20px 0;
+    border-radius: 6px;
+    font-family: 'Fira Code', monospace;  /* police neutre, lisible */
+    color: #ffffff;                    /* texte blanc */
+    line-height: 1.6;
+}
+
+/* Titre de l'aptitude */
+.codex-block .aptitude-title {
+    font-weight: 700;  /* gras */
+    font-size: 1rem;
+    margin-bottom: 10px;
+    display: block;
+    color: #d4af37;   /* optionnel : doré léger pour le titre */
+}
+
+/* Texte descriptif */
+.codex-block p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #ffffff; /* blanc */
+}

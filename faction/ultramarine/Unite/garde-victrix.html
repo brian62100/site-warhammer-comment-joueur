@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Datasheet : Garde Victrix</title>
+    <link rel="stylesheet" href="../../../css/fiche.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="container">
+        <div class="datasheet">
+            <div class="datasheet-header">
+                <h2>Garde Victrix</h2>
+                <span class="tag">Elite, Infanterie, Ultramarines</span>
+            </div>
+
+            <!-- STATS TABLE -->
+            <div class="stats-table-wrapper">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>Mouvement</th>
+                            <th>Endurance</th>
+                            <th>Sauvegarde</th>
+                            <th>Invulnérable</th>
+                            <th>PV</th>
+                            <th>Commandement</th>
+                            <th>Objectif (CO)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>6"</td>
+                            <td>4</td>
+                            <td>3+</td>
+                            <td>4+</td>
+                            <td>2</td>
+                            <td>7</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ARSENAL DE TIR -->
+            <h4 class="highlight">ARSENAL DE TIR</h4>
+            <div class="stats-table-wrapper">
+                <table class="weapon-table">
+                    <thead>
+                        <tr>
+                            <th>Arme</th>
+                            <th>Portée</th>
+                            <th>Attaques</th>
+                            <th>Touche</th>
+                            <th>Force</th>
+                            <th>Pénétration</th>
+                            <th>Dégâts</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Fusil Bolter d’Assaut</td>
+                            <td>24"</td>
+                            <td>2</td>
+                            <td>3+</td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>Tir</td>
+                        </tr>
+                        <tr>
+                            <td>Lance-grenade</td>
+                            <td>24"</td>
+                            <td>1</td>
+                            <td>3+</td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>Tir</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ARSENAL DE MÊLÉE -->
+            <h4 class="highlight">ARSENAL DE MÊLÉE</h4>
+            <div class="stats-table-wrapper">
+                <table class="weapon-table">
+                    <thead>
+                        <tr>
+                            <th>Arme</th>
+                            <th>Attaques</th>
+                            <th>Touche</th>
+                            <th>Force</th>
+                            <th>Pénétration</th>
+                            <th>Dégâts</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Épée énergétique</td>
+                            <td>3</td>
+                            <td>3+</td>
+                            <td>Force +1</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>Mêlée</td>
+                        </tr>
+                        <tr>
+                            <td>Bouclier Storm</td>
+                            <td>–</td>
+                            <td>–</td>
+                            <td>–</td>
+                            <td>–</td>
+                            <td>–</td>
+                            <td>Défense</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- APTITUDES TACTIQUES -->
+            <h4 class="highlight">APTITUDES TACTIQUES</h4>
+            <div class="terminal">
+                - Défense Victrix : relance 1 pour les sauvegardes de bouclier.<br>
+                - Discipline Ultramarine : +1 Commandement pour les ordres reçus.<br>
+                - Combat Serré : +1 Attaque lors de la première mêlée.
+            </div>
+
+            <!-- DICTIONNAIRE DES ARMES -->
+            <h4 class="highlight">DICTIONNAIRE DES ARMES</h4>
+            <div class="terminal">
+                <strong>Fusil Bolter d’Assaut :</strong> Arme à tir rapide, portée 24", 2 attaques, Force 4, PA 0, Dégâts 1.<br>
+                <strong>Lance-grenade :</strong> Arme à tir spécial, portée 24", 1 attaque, Force 4, PA 0, Dégâts 1.<br>
+                <strong>Épée énergétique :</strong> Arme de mêlée lourde, Force +1, PA 2, Dégâts 1.<br>
+                <strong>Bouclier Storm :</strong> Défense améliorée, relance 1 pour sauvegarde.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        fetch('navbar.htm')
+            .then(res => res.text())
+            .then(data => { document.getElementById('navbar-placeholder').innerHTML = data; });
+    </script>
+</body>
+</html>
