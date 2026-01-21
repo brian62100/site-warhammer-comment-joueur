@@ -4,47 +4,24 @@
     <meta charset="UTF-8">
     <title>Galerie Ultramarines</title>
     <link rel="stylesheet" href="../../css/style.css">
-    <style>
-        .unit-gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            padding: 20px;
-        }
-        .unit-card {
-            width: 200px;
-            border: 2px solid #005ab2;
-            border-radius: 10px;
-            overflow: hidden;
-            text-align: center;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-        .unit-card:hover {
-            transform: scale(1.05);
-        }
-        .unit-card img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-        }
-        .unit-card h3 {
-            background-color: #005ab2;
-            color: gold;
-            margin: 0;
-            padding: 10px 0;
-        }
-    </style>
+    <link rel="stylesheet" href="../../css/infanterie.css">
+    
 </head>
+
 <body>
     <div id="navbar-placeholder"></div>
+
+    <div class="codex-back">
+        <a href="../ultramarine/ultramarines-presentation.htm" class="back-button">
+            ← Retour au Codex Ultramarines
+        </a>
+    </div>
 
     <h1 style="text-align:center;">Galerie des unités Ultramarines</h1>
 
     <div class="unit-gallery">
         <div class="unit-card" onclick="location.href='Unite/Escouade_Intercessors.html'">
-            <img src="../../Images/image.jpg" alt="Escouade d'Intercessors">
+            <img src="../../Images/intercessors.jpg" alt="Escouade d'Intercessors">
             <h3>Escouade d'Intercessors</h3>
         </div>
 
@@ -54,7 +31,7 @@
         </div>
 
         <div class="unit-card" onclick="location.href='Unite/escouade-tactique.html'">
-            <img src="../../images/tactical.jpg" alt="Escouade Tactique">
+            <img src="../../images/escouade_tactics.jpg" alt="Escouade Tactique">
             <h3>Escouade Tactique</h3>
         </div>
 

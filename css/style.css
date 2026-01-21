@@ -173,6 +173,52 @@ h1, h2, h3, .logo {
   color: var(--accent-main);
 }
 
+/* RESET COMPLET DU BOUTON DROPDOWN */
+.dropdown-trigger {
+  all: unset;
+  cursor: pointer;
+
+  /* même style que les liens */
+  display: block;
+  padding: 10px 4px;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+/* Hover identique aux liens */
+.dropdown-trigger:hover {
+  color: var(--accent-main);
+  text-shadow: var(--glow);
+}
+
+/* Soulignement comme Accueil / Factions */
+.dropdown-trigger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  width: 0%;
+  height: 2px;
+  background: var(--accent-main);
+  transition: width 0.3s ease;
+}
+
+.dropdown:hover .dropdown-trigger::after {
+  width: 100%;
+}
+
+/* Chevron un peu plus stylé */
+.dropdown-trigger .chevron {
+  margin-left: 6px;
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+
 /* =====================================================
    MAIN LAYOUT
    ===================================================== */
