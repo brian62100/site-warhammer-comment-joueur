@@ -1,0 +1,283 @@
+/* =============================================== */
+/* TOUR.CSS - Séquence de Combat WH40K V10         */
+/* =============================================== */
+
+/* =============================================== */
+/* CORPS PRINCIPAL                                  */
+/* =============================================== */
+body {
+    font-family: 'Fira Code', monospace;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* =============================================== */
+/* NAVBAR FIXE EN HAUT                              */
+/* =============================================== */
+#navbar-placeholder {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; /* moins haute que héros */
+    z-index: 10000;
+    background-color: #1c1c1c;
+    border-bottom: 2px solid #005ab2;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+/* =============================================== */
+/* TITRES                                           */
+/* =============================================== */
+h1, h2, h3, h4 {
+    font-family: 'Cinzel', serif;
+    color: #ffd966; /* doré WH40K */
+    margin-bottom: 10px;
+    text-align: center;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+}
+
+.highlight {
+    color: #ffd966;
+    font-weight: bold;
+}
+
+/* =============================================== */
+/* TERMINAL / LOG PHASE                             */
+/* =============================================== */
+.terminal {
+    background-color: #111111;
+    border: 2px solid #005ab2; /* bleu impérial */
+    border-radius: 10px;
+    padding: 15px 20px;
+    font-size: 0.95rem;
+    color: #e0e0e0;
+    line-height: 1.5;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+    margin-bottom: 30px;
+}
+
+.terminal .gold-text {
+    color: #ffd966;
+    font-weight: bold;
+}
+
+/* =============================================== */
+/* EXPERIENCE STACK / PHASE CARDS                  */
+/* =============================================== */
+.experience-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+/* Chaque phase */
+.exp-card {
+    background: #1b1b1b;
+    border: 2px solid #005ab2;
+    border-radius: 12px;
+    width: 300px;
+    min-width: 280px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+    display: flex;
+    flex-direction: column;
+}
+
+.exp-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.85);
+}
+
+/* HEADER DE CHAQUE CARTE */
+.exp-header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #005ab2;
+    background: linear-gradient(135deg, rgba(0,90,178,0.3), #0f0f0f);
+}
+
+.exp-header-main h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.exp-header-main .project-category {
+    font-size: 0.85rem;
+    color: #a0a0a0;
+    font-style: italic;
+}
+
+/* BOUTON DÉTAIL PHASE */
+.btn-project {
+    padding: 8px 15px;
+    background: linear-gradient(145deg, rgba(0,90,178,0.4), rgba(0,0,0,0.85));
+    border: 2px solid #005ab2;
+    border-radius: 6px;
+    color: #ffd966;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.85rem;
+    transition: all 0.25s ease;
+}
+
+.btn-project:hover {
+    background: linear-gradient(145deg, rgba(0,90,178,0.6), rgba(0,0,0,0.95));
+    color: #fff59d;
+    transform: translateY(-2px);
+}
+
+/* CONTENU DE LA CARTE */
+.detail-box {
+    padding: 15px 20px;
+}
+
+.detail-box .task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.detail-box .task-list li {
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+/* =============================================== */
+/* BOUTON DÉMARRAGE / INIT PHASE                   */
+/* =============================================== */
+.btn-40k {
+    display: inline-block;
+    padding: 12px 28px;
+    background: linear-gradient(145deg, rgba(0,90,178,0.35), rgba(0,0,0,0.9));
+    border: 2px solid #005ab2;
+    border-radius: 10px;
+    color: #ffd966;
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+    box-shadow: inset 0 0 8px rgba(0,90,178,0.5), 0 4px 12px rgba(0,0,0,0.6);
+    transition: all 0.3s ease;
+}
+
+.btn-40k:hover {
+    background: linear-gradient(145deg, rgba(0,90,178,0.6), rgba(0,0,0,1));
+    color: #fff59d;
+    transform: translateY(-3px);
+    box-shadow: inset 0 0 10px rgba(0,90,178,0.7), 0 6px 18px rgba(0,0,0,0.7);
+}
+
+/* Bouton Détails Phase sous chaque carte */
+.btn-phase-wrapper {
+    text-align: center; /* centre le bouton */
+    margin: 15px 0 20px 0; /* espace au-dessus et dessous */
+}
+
+.btn-phase {
+    display: inline-block;
+    padding: 10px 25px;
+    background: linear-gradient(145deg, rgba(0,90,178,0.35), rgba(0,0,0,0.9));
+    border: 2px solid #005ab2;
+    border-radius: 8px;
+    color: #ffd966;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn-phase:hover {
+    background: linear-gradient(145deg, rgba(0,90,178,0.6), rgba(0,0,0,1));
+    color: #fff59d;
+    transform: translateY(-2px);
+    box-shadow: inset 0 0 8px rgba(0,90,178,0.6), 0 4px 12px rgba(0,0,0,0.7);
+}
+
+/* Numéro de phase en haut à gauche */
+.phase-number {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #005ab2;
+    color: #ffd966;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    border-radius: 6px;
+    z-index: 2;
+}
+
+/* Carte avec position relative pour numéro */
+.exp-card {
+    position: relative;
+    background: #1b1b1b;
+    border: 2px solid #005ab2;
+    border-radius: 12px;
+    width: 300px;
+    min-width: 280px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-top: 30px; /* espace pour le numéro */
+}
+
+/* Contenu interne centré et légèrement décalé à droite */
+.exp-card .exp-content h3 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding-left: 20px;  /* décale légèrement à droite pour éviter chevauchement avec numéro */
+    padding-right: 20px;
+}
+
+/* Catégorie sous le titre */
+.project-category {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #a0a0a0;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Bloc texte limité */
+.detail-box {
+    max-height: 100px;
+    overflow: hidden;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Centrer le bouton */
+.btn-phase-wrapper {
+    text-align: center;
+    margin: 10px 0 20px 0;
+}
+
+
+
+/* =============================================== */
+/* RESPONSIVE                                      */
+/* =============================================== */
+@media screen and (max-width: 1024px) {
+    .experience-stack { gap: 20px; justify-content: center; }
+    .exp-card { width: 45%; }
+}
+
+@media screen and (max-width: 600px) {
+    .exp-card { width: 90%; }
+    .exp-header-main { flex-direction: column; gap: 10px; }
+    .btn-project { width: 100%; text-align: center; }
+}

@@ -3,11 +3,11 @@
 /* =============================================== */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #1c1c1c;
-    color: #f0f0f0;
     margin: 0;
     padding: 0;
     padding-top: 70px; /* espace pour navbar fixe */
+    background: linear-gradient(135deg, #0a0a14, #1a1a2e);
+    color: #e0e0e0;
 }
 
 /* =============================================== */
@@ -35,108 +35,55 @@ body {
 }
 
 /* =============================================== */
-/* TITRES                                           */
+/* GALERIE INFANTERIE / UNITÉS TERRESTRES          */
 /* =============================================== */
-h1, h2, h3, h4 {
-    font-family: 'Cinzel', serif;
-    color: gold;
-    text-align: center;
-    margin-bottom: 10px;
+.unit-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px 0;
 }
 
-.highlight {
-    color: gold;
-    text-shadow: 1px 1px 3px black;
-}
-
-/* =============================================== */
-/* TAGS (PETITS LABELS)                             */
-/* =============================================== */
-.tag {
-    display: inline-block;
-    margin: 5px 0;
-    padding: 5px 12px;
-    border-radius: 8px;
-    background-color: #005ab2;
-    color: white;
-    font-size: 0.85rem;
-}
-
-/* =============================================== */
-/* DATASHEET / CARTES VEHICULES                     */
-/* =============================================== */
-.exp-card {
-    background: #2a2a2a;
+.unit-card {
+    width: 220px;
     border: 2px solid #005ab2;
     border-radius: 15px;
-    padding: 20px;
-    margin: 20px auto;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
-    transition: transform 0.2s;
-}
-
-.exp-card:hover {
-    transform: translateY(-5px);
-}
-
-/* =============================================== */
-/* HEADER DE LA DATASHEET                            */
-/* =============================================== */
-.datasheet-header {
+    overflow: hidden;
     text-align: center;
-    margin-bottom: 20px;
+    cursor: pointer;
+    background: linear-gradient(145deg, #111126, #1a1a2e);
+    box-shadow: 0 0 20px rgba(0,90,178,0.5);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* =============================================== */
-/* TABLES STATS & ARMES                              */
-/* =============================================== */
-.stats-table-wrapper {
-    overflow-x: auto;
-    margin-bottom: 20px;
+.unit-card:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 0 30px #005ab2, 0 0 20px #ffd966 inset;
 }
 
-.stats-table, .weapon-table {
+.unit-card img {
     width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 10px;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 1px solid #005ab2;
 }
 
-.stats-table th, .stats-table td,
-.weapon-table th, .weapon-table td {
-    border: 1px solid #005ab2;
-    padding: 8px;
-    text-align: center;
-}
-
-.stats-table th, .weapon-table th {
+.unit-card h3 {
     background-color: #005ab2;
     color: gold;
-    font-weight: bold;
+    margin: 0;
+    padding: 10px 0;
+    font-size: 1rem;
 }
 
-.stats-table td, .weapon-table td {
-    background-color: #1f1f1f;
-}
-
-/* =============================================== */
-/* TERMINAL POUR APTITUDES                          */
-/* =============================================== */
-.terminal {
-    background-color: #111111;
-    border: 1px solid #005ab2;
-    border-radius: 10px;
-    padding: 15px;
-    font-family: 'Courier New', monospace;
+.unit-card p {
+    padding: 5px;
     font-size: 0.9rem;
-    color: #e0e0e0;
-}
-
-.terminal p {
-    margin: 8px 0;
 }
 
 /* =============================================== */
-/* GALERIE VEHICULES                                */
+/* GALERIE VÉHICULES                                */
 /* =============================================== */
 .vehicle-gallery {
     display: flex;
@@ -147,25 +94,27 @@ h1, h2, h3, h4 {
 }
 
 .vehicle-card {
-    width: 220px;
+    width: 240px;
     border: 2px solid #005ab2;
     border-radius: 15px;
     overflow: hidden;
     text-align: center;
     cursor: pointer;
-    background: #2a2a2a;
-    transition: transform 0.2s;
+    background: linear-gradient(145deg, #111126, #1a1a2e);
+    box-shadow: 0 0 20px rgba(0,90,178,0.5);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .vehicle-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.7);
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 0 30px #005ab2, 0 0 20px #ffd966 inset;
 }
 
 .vehicle-card img {
     width: 100%;
-    height: 150px;
+    height: 160px;
     object-fit: cover;
+    border-bottom: 1px solid #005ab2;
 }
 
 .vehicle-card h3 {
@@ -173,57 +122,20 @@ h1, h2, h3, h4 {
     color: gold;
     margin: 0;
     padding: 10px 0;
+    font-size: 1.1rem;
 }
 
-/* =============================================== */
-/* GALERIE INFANTERIE / UNITÉS TERRESTRES           */
-/* =============================================== */
-.unit-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    padding: 20px;
-}
-
-.unit-card {
-    width: 220px;
-    border: 2px solid #005ab2;
-    border-radius: 10px;
-    overflow: hidden;
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.unit-card:hover {
-    transform: scale(1.05);
-}
-
-.unit-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-}
-
-.unit-card h3 {
-    background-color: #005ab2;
-    color: gold;
-    margin: 0;
-    padding: 10px 0;
-}
-
-.unit-card p {
+.vehicle-card p {
     padding: 5px;
     font-size: 0.9rem;
 }
 
 /* =============================================== */
-/* BOUTON RETOUR VEHICULE - ALIGNÉ À GAUCHE        */
+/* BOUTON RETOUR VÉHICULE - ALIGNÉ À GAUCHE       */
 /* =============================================== */
 .vehicule-back {
     margin: 20px 0;
-    text-align: left; /* aligné à gauche */
+    text-align: left;
 }
 
 .back-vehicule-button,
@@ -263,10 +175,10 @@ h1, h2, h3, h4 {
 }
 
 /* =============================================== */
-/* FLECHES DE NAVIGATION - VEHICULES               */
+/* FLECHES DE NAVIGATION - VÉHICULES               */
 /* =============================================== */
 .nav-arrow {
-    position: absolute;      /* Absolue par rapport au container */
+    position: absolute; /* par rapport au container */
     top: 50%;
     transform: translateY(-50%);
     padding: 12px 18px;
@@ -283,13 +195,13 @@ h1, h2, h3, h4 {
 }
 
 .nav-arrow.left {
-    left: 0;  
-    margin-left: -10px; 
+    left: 0;
+    margin-left: -10px;
 }
 
 .nav-arrow.right {
-    right: 0;  
-    margin-right: -10px; 
+    right: 0;
+    margin-right: -10px;
 }
 
 .nav-arrow:hover {
@@ -303,7 +215,7 @@ h1, h2, h3, h4 {
 /* =============================================== */
 .codex-back {
     margin: 20px 0;
-    text-align: left; /* aligné à gauche pour cohérence Infanterie */
+    text-align: left;
 }
 
 .back-button,
@@ -314,21 +226,17 @@ h1, h2, h3, h4 {
     font-size: 0.85rem;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-
-    color: #d4af37; /* doré */
+    color: #d4af37;
     background: linear-gradient(
         135deg,
         rgba(0, 90, 178, 0.15),
         rgba(0, 0, 0, 0.9)
     );
-
     border: 1px solid #005ab2;
     border-radius: 6px;
-
     box-shadow:
         inset 0 0 8px rgba(0, 90, 178, 0.4),
         0 0 10px rgba(0, 0, 0, 0.6);
-
     text-decoration: none;
     transition: all 0.25s ease;
 }
@@ -344,7 +252,7 @@ h1, h2, h3, h4 {
         inset 0 0 12px rgba(0, 90, 178, 0.7),
         0 0 15px rgba(0, 90, 178, 0.6);
     transform: translateX(-3px);
-    color: #ffd966; /* doré clair au survol */
+    color: #ffd966;
 }
 
 /* =============================================== */

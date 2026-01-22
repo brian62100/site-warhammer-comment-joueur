@@ -1,165 +1,99 @@
 /* =============================================== */
-/* STRATAGÈMES.CSS                                 */
+/* PHASE.CSS - Stratagèmes / Codex WH40K UX Design */
 /* =============================================== */
 
-/* =============================================== */
-/* RESET DE BASE POUR LE TABLEAU                    */
-/* =============================================== */
-table {
-    width: 90%;
-    margin: 30px auto;
-    border-collapse: collapse;
-    font-family: 'Arial', sans-serif;
-    background-color: #001f3f; /* bleu foncé Ultramarine */
-    color: gold; /* texte doré */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+body {
+    font-family: 'Exo 2', sans-serif;
+    background-color: #0a0a14;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
 }
 
-/* =============================================== */
-/* CAPTION / TITRE DU TABLEAU                       */
-/* =============================================== */
-caption {
-    caption-side: top;
-    font-size: 1.8em;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #005ab2; /* bleu vif Ultramarine */
-}
 
-/* =============================================== */
-/* EN-TÊTE DU TABLEAU                               */
-/* =============================================== */
-thead th {
-    background-color: #005ab2; /* bleu vif */
-    color: gold;
-    padding: 12px;
-    font-size: 1em;
-    text-align: center;
-    border-bottom: 2px solid gold;
-}
-
-/* =============================================== */
-/* CELLULES DU TABLEAU                               */
-/* =============================================== */
-tbody td {
-    padding: 10px;
-    text-align: center;
-    border-bottom: 1px solid gold;
-}
-
-/* =============================================== */
-/* LIGNES ALTERNÉES                                  */
-/* =============================================== */
-tbody tr:nth-child(even) {
-    background-color: #003366; /* bleu légèrement plus clair */
-}
-
-/* =============================================== */
-/* HOVER SUR LIGNE                                  */
-/* =============================================== */
-tbody tr:hover {
-    background-color: #004080;
-    transform: scale(1.02);
-    transition: all 0.2s ease-in-out;
-}
-
-/* =============================================== */
-/* TITRE PRINCIPAL DE LA PAGE                        */
-/* =============================================== */
+/* TITRE PRINCIPAL */
 h1 {
     text-align: center;
-    margin-top: 20px;
-    font-size: 2.5em;
-    color: #005ab2;
-    text-shadow: 1px 1px 2px black;
+    font-family: 'Cinzel', serif;
+    color: #ffd966;
+    font-size: 3rem;
+    margin: 30px 0;
+    text-shadow: 0 0 10px #005ab2, 0 0 15px #001f3f;
 }
 
-/* =============================================== */
-/* BOUTON RETOUR CODEX ULTRAMARINES                 */
-/* =============================================== */
+/* BOUTON RETOUR */
 .codex-back {
-    margin: 20px 0;
-    text-align: left; /* aligné à gauche pour cohérence avec Infanterie/Héros */
+    margin: 20px;
+    text-align: left;
 }
 
-.back-button,
-.back-button:link,
-.back-button:visited {
-    display: inline-block;
-    padding: 10px 18px;
-    font-size: 0.85rem;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-
-    color: #d4af37; /* doré */
-    background: linear-gradient(
-        135deg,
-        rgba(0, 90, 178, 0.15),
-        rgba(0, 0, 0, 0.9)
-    );
-
-    border: 1px solid #005ab2;
-    border-radius: 6px;
-
-    box-shadow:
-        inset 0 0 8px rgba(0, 90, 178, 0.4),
-        0 0 10px rgba(0, 0, 0, 0.6);
-
+.back-button {
+    color: #ffd966;
     text-decoration: none;
-    transition: all 0.25s ease;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: 2px solid #005ab2;
+    border-radius: 8px;
+    background: linear-gradient(145deg, rgba(0,90,178,0.2), rgba(0,0,0,0.7));
+    box-shadow: 0 0 10px rgba(0,90,178,0.6);
+    transition: all 0.3s ease;
+}
+.back-button:hover {
+    background: linear-gradient(145deg, rgba(0,90,178,0.5), rgba(0,0,0,0.9));
+    box-shadow: 0 0 20px #005ab2, 0 0 15px #ffd966 inset;
+    color: #ffd966;
 }
 
-.back-button:hover,
-.back-button:active {
-    background: linear-gradient(
-        135deg,
-        rgba(0, 90, 178, 0.35),
-        rgba(0, 0, 0, 0.95)
-    );
-    box-shadow:
-        inset 0 0 12px rgba(0, 90, 178, 0.7),
-        0 0 15px rgba(0, 90, 178, 0.6);
-    transform: translateX(-3px);
-    color: #ffd966; /* doré clair au survol */
+/* GRILLE STRATAGÈMES */
+.stratageme-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 25px;
 }
 
-/* =============================================== */
-/* RESPONSIVE / ADAPTATIF                           */
-/* =============================================== */
+/* CARTES STRATAGÈMES */
+.stratageme-card {
+    background: linear-gradient(145deg, #111126, #1a1a2e);
+    border: 2px solid #005ab2;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0,90,178,0.5);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.stratageme-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 0 30px #005ab2, 0 0 20px #ffd966 inset;
+}
+
+/* HEADER DE LA CARTE */
+.stratageme-card h2 {
+    font-family: 'Cinzel', serif;
+    color: #ffd966;
+    font-size: 1.3rem;
+    margin: 0 0 10px 0;
+    text-shadow: 0 0 6px #001f3f;
+}
+
+/* TEXTE DE LA CARTE */
+.stratageme-card p {
+    margin: 6px 0;
+    line-height: 1.5;
+}
+
+.stratageme-card p strong {
+    color: #ffd966;
+}
+
+/* RESPONSIVE */
 @media screen and (max-width: 768px) {
-    table, thead, tbody, th, td, tr {
-        display: block;
-    }
-
-    thead tr {
-        display: none;
-    }
-
-    tbody tr {
-        margin-bottom: 15px;
-        border: 2px solid gold;
-        border-radius: 10px;
+    .stratageme-container {
+        grid-template-columns: 1fr;
         padding: 10px;
-        background-color: #003366;
-    }
-
-    tbody td {
-        text-align: right;
-        padding-left: 50%;
-        position: relative;
-    }
-
-    tbody td::before {
-        content: attr(data-label);
-        position: absolute;
-        left: 10px;
-        font-weight: bold;
-        color: gold;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    table {
-        width: 100%;
     }
 }

@@ -1,0 +1,113 @@
+/* =============================================== */
+/* PHASE.CSS - Stratagèmes / Codex WH40K UX Design */
+/* =============================================== */
+
+body {
+    font-family: 'Exo 2', sans-serif;
+    background-color: #0c0c1a;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    color: #ffd966;
+    font-size: 2.5rem;
+    margin: 20px 0;
+    text-shadow: 0 0 6px #005ab2, 0 0 10px #001f3f;
+}
+
+/* Bouton retour codex */
+.codex-back {
+    margin: 20px;
+}
+.back-button {
+    color: #ffd966;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 16px;
+    border: 2px solid #005ab2;
+    border-radius: 6px;
+    background: linear-gradient(145deg, rgba(0,90,178,0.2), rgba(0,0,0,0.7));
+    box-shadow: 0 0 8px rgba(0,90,178,0.5);
+    transition: all 0.25s ease;
+}
+.back-button:hover {
+    background: linear-gradient(145deg, rgba(0,90,178,0.5), rgba(0,0,0,0.9));
+    box-shadow: 0 0 15px #005ab2, 0 0 12px #ffd966 inset;
+    color: #ffd966;
+}
+
+/* =============================================== */
+/* Grille des stratagèmes */
+.stratagems-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Cartes Stratagèmes */
+.stratagem-card {
+    background-color: #111126;
+    border: 2px solid #005ab2;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0,90,178,0.5);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.stratagem-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 0 25px #005ab2, 0 0 15px #ffd966 inset;
+}
+
+/* Header de la carte */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #005ab2;
+    padding-bottom: 8px;
+}
+
+.card-header h2 {
+    font-family: 'Cinzel', serif;
+    color: #ffd966;
+    font-size: 1.2rem;
+    margin: 0;
+    text-shadow: 0 0 4px #001f3f;
+}
+
+.cp {
+    background-color: #005ab2;
+    color: #ffd966;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    box-shadow: 0 0 4px #ffd966;
+}
+
+/* Contenu de la carte */
+.stratagem-card p {
+    margin: 4px 0;
+    line-height: 1.4;
+}
+.stratagem-card p strong {
+    color: #ffd966;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .stratagems-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+}

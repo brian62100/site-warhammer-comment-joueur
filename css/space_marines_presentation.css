@@ -1,91 +1,224 @@
 /* ===================================================== */
-/* PAGE PRÉSENTATION ULTRAMARINES                        */
+/* PAGE PRÉSENTATION ULTRAMARINES - DESIGN ÉPIQUE WH40K */
 /* ===================================================== */
 
-/* Container général */
+/* ===================================================== */
+/* CORPS PRINCIPAL                                      */
+/* ===================================================== */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Dégradé immersif WH40K */
+    background: linear-gradient(135deg, #0a0d14 0%, #121722 100%);
+    color: #fff;
+    position: relative;
+    padding-top: 70px; /* espace pour navbar fixe */
+    overflow-x: hidden;
+}
+
+/* ===================================================== */
+/* NAVBAR FIXE                                          */
+/* ===================================================== */
+#navbar-placeholder {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 10000;
+    background-color: #1c1c1c;
+    border-bottom: 2px solid #005ab2;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+/* ===================================================== */
+/* CONTAINER GENERAL                                    */
+/* ===================================================== */
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 30px;
+    padding: 30px;
+    position: relative;
 }
 
-/* Header */
+/* ===================================================== */
+/* DÉCORATIONS LATÉRALES - style WH40K                 */
+/* ===================================================== */
+body::before,
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    width: 60px;
+    height: 100%;
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(0,90,178,0.1) 0px,
+        rgba(0,90,178,0.2) 10px,
+        rgba(0,0,0,0.3) 10px,
+        rgba(0,0,0,0.3) 20px
+    );
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* bandes latérales */
+body::before { left: 0; }
+body::after { right: 0; }
+
+/* motifs WH40K subtils (crânes ou symboles en CSS) */
+body::before::after,
+body::after::after {
+    content: '☥'; /* symbole sacré (ex: icône impériale) */
+    position: absolute;
+    font-size: 36px;
+    color: rgba(255, 215, 102, 0.1);
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ===================================================== */
+/* HEADER                                               */
+/* ===================================================== */
 header {
-    background: linear-gradient(90deg, rgba(0,90,178,0.05), rgba(0,90,178,0.15));
-    border-left: 5px solid #005ab2;
-    padding: 20px 30px;
-    border-radius: 6px;
-    margin-bottom: 20px;
+    background: linear-gradient(135deg, rgba(0,90,178,0.15), rgba(0,0,0,0.9));
+    border-left: 6px solid #005ab2;
+    padding: 25px 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 20px rgba(0,90,178,0.5);
+    position: relative;
+    overflow: hidden;
 }
 
+/* Halo lumineux */
+header::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0,90,178,0.2) 0%, transparent 70%);
+    transform: rotate(45deg);
+    pointer-events: none;
+}
+
+/* Titre */
 header h1 {
-    color: #005ab2;
+    color: #ffd966;
     font-family: 'Cinzel', serif;
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin: 0 0 5px 0;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
 }
 
+/* Citation / devise */
 header p.gold-text {
-    color: #d4af37;
+    color: #ffd966;
     font-family: 'Fira Code', monospace;
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin: 0;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
 }
 
-/* Terminal / codex block */
+/* ===================================================== */
+/* TERMINAL / CODEX BLOCK                               */
+/* ===================================================== */
 .terminal {
     background: #0a0e14;
-    border-left: 4px solid #005ab2;
-    padding: 20px;
+    border-left: 5px solid #005ab2;
+    padding: 25px;
     font-family: 'Fira Code', monospace;
-    font-size: 0.9rem;
-    line-height: 1.6;
-    box-shadow: inset 0 0 15px rgba(0,90,178,0.4);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    box-shadow: inset 0 0 25px rgba(0,90,178,0.5);
     color: #e6e8eb;
-    border-radius: 4px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glow subtil */
+.terminal::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,90,178,0.4) inset;
+    pointer-events: none;
 }
 
 /* Highlight dans le terminal */
 .terminal .highlight {
-    color: #d4af37;
-    font-weight: 600;
+    color: #ffd966;
+    font-weight: 700;
 }
 
-/* Section experience-stack (cards) */
+/* ===================================================== */
+/* SECTION EXPERIENCE-STACK / CARDS                     */
+/* ===================================================== */
 .experience-stack {
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .main-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 28px;
 }
 
 /* Cards des sections */
 .card {
-    background: #0d1117;
-    border-left: 4px solid #005ab2;
-    border-radius: 6px;
-    padding: 20px;
+    background: linear-gradient(145deg, #0d1117, #111426);
+    border-left: 5px solid #005ab2;
+    border-radius: 10px;
+    padding: 25px;
     text-align: center;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transition: transform 0.25s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    color: #d4af37;
+    color: #ffd966;
+    position: relative;
+    overflow: hidden;
 }
 
+/* Glow / flare dans la card */
+.card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0,90,178,0.15) 0%, transparent 70%);
+    transform: rotate(45deg);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+/* Title inside card */
 .card h3 {
     color: #005ab2;
     font-family: 'Cinzel', serif;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     margin: 0;
     text-transform: uppercase;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
 }
 
-/* Hover effet */
+/* Hover effet "divin" */
 .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 0 15px rgba(0,90,178,0.6);
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 0 25px rgba(0,90,178,0.7), 0 0 15px rgba(255,215,102,0.5) inset;
+}
+
+.card:hover::before {
+    background: radial-gradient(circle, rgba(0,90,178,0.3) 0%, transparent 70%);
 }
 
 /* Links */
@@ -97,39 +230,69 @@ header p.gold-text {
     color: inherit;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .main-grid {
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    }
-}
-
 /* ===================================================== */
-/* Bloc aptitude / description WH40K                    */
+/* BLOC APTITUDE / DESCRIPTION WH40K                    */
 /* ===================================================== */
 .codex-block {
-    background: rgba(0,0,0,0.2);      /* fond sombre mais pas trop */
-    border-left: 4px solid #005ab2;   /* accent bleu Ultramarines */
-    padding: 20px 25px;
-    margin: 20px 0;
-    border-radius: 6px;
-    font-family: 'Fira Code', monospace;  /* police neutre, lisible */
-    color: #ffffff;                    /* texte blanc */
-    line-height: 1.6;
+    background: linear-gradient(145deg, rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+    border-left: 6px solid #005ab2;
+    padding: 25px 30px;
+    margin: 25px 0;
+    border-radius: 10px;
+    font-family: 'Fira Code', monospace;
+    color: #ffffff;
+    line-height: 1.8;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(0,90,178,0.5) inset;
+}
+
+/* Glow effet */
+.codex-block::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    left: -30%;
+    width: 160%;
+    height: 160%;
+    background: radial-gradient(circle, rgba(0,90,178,0.2) 0%, transparent 70%);
+    transform: rotate(30deg);
+    pointer-events: none;
 }
 
 /* Titre de l'aptitude */
 .codex-block .aptitude-title {
-    font-weight: 700;  /* gras */
-    font-size: 1rem;
-    margin-bottom: 10px;
+    font-weight: 900;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
     display: block;
-    color: #d4af37;   /* optionnel : doré léger pour le titre */
+    color: #ffd966;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
 }
 
 /* Texte descriptif */
 .codex-block p {
     margin: 0;
-    font-size: 0.9rem;
-    color: #ffffff; /* blanc */
+    font-size: 0.95rem;
+    color: #ffffff;
+}
+
+/* Optionnel : animations légères de glow sur hover */
+.codex-block:hover {
+    box-shadow: 0 0 35px rgba(0,90,178,0.7) inset, 0 0 20px rgba(255,215,102,0.4);
+}
+
+/* ===================================================== */
+/* RESPONSIVE / ADAPTATIF                               */
+/* ===================================================== */
+@media (max-width: 768px) {
+    .main-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .main-grid {
+        grid-template-columns: 1fr;
+    }
 }
