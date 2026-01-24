@@ -1,0 +1,151 @@
+/* =============================================== */
+/* REGLE.CSS - Codex WH40K / Ultramarines Design */
+/* =============================================== */
+
+/* FONT IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&family=Orbitron:wght@500;700&display=swap');
+
+body {
+    font-family: 'Exo 2', sans-serif;
+    background: linear-gradient(135deg, #0a0a14, #1a1a2e);
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+/* CONTAINER PRINCIPAL */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* TITRE PRINCIPAL */
+h1.highlight {
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    color: #ffd966;
+    font-size: 3rem;
+    margin-bottom: 5px;
+    text-shadow: 0 0 8px #ffd966, 0 0 15px #005ab2;
+}
+
+p.gold-text {
+    text-align: center;
+    color: #c6a146;
+    font-style: italic;
+    margin-bottom: 40px;
+}
+
+/* CARTES D’EXPLICATION */
+.exp-card {
+    background: linear-gradient(145deg, #111126, #1a1a2e);
+    border: 2px solid #005ab2;
+    border-radius: 15px;
+    padding: 25px 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 20px rgba(0,90,178,0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.exp-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 0 30px #005ab2, 0 0 25px #ffd966 inset;
+}
+
+/* TITRES DES CARTES */
+.exp-card h2.gold-text {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    color: #ffd966;
+    margin-bottom: 15px;
+    text-shadow: 0 0 5px #001f3f;
+    border-bottom: 1px dotted #c6a146;
+    padding-bottom: 5px;
+}
+
+/* BOX TERMINAL / DETAILS */
+.terminal, .detail-box {
+    background-color: rgba(10, 10, 20, 0.7);
+    border: 1px solid #005ab2;
+    border-left: 5px solid #ffd966;
+    border-radius: 10px;
+    padding: 15px 20px;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    color: #e0e0e0;
+    position: relative;
+}
+
+.terminal p span.highlight {
+    color: #ffd966;
+    font-weight: 700;
+    text-shadow: 0 0 4px #005ab2;
+}
+
+/* NOTE */
+.terminal .gold-text {
+    color: #c6a146;
+    font-style: italic;
+}
+
+/* TABLEAUX */
+.stats-table-wrapper {
+    overflow-x: auto;
+}
+
+.stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(15, 15, 30, 0.85);
+    border: 1px solid #005ab2;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,90,178,0.5);
+}
+
+.stats-table th, .stats-table td {
+    border: 1px solid #005ab2;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.stats-table th {
+    background: linear-gradient(145deg, #111126, #1a1a2e);
+    color: #ffd966;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    text-shadow: 0 0 3px #001f3f;
+}
+
+.stats-table td {
+    color: #e0e0e0;
+}
+
+.stats-table tr:hover {
+    background-color: rgba(0, 90, 178, 0.2);
+}
+
+/* LISTES */
+.exp-card ul {
+    padding-left: 20px;
+}
+
+.exp-card ul li {
+    margin-bottom: 8px;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+    .exp-card {
+        padding: 15px 20px;
+    }
+
+    h1.highlight {
+        font-size: 2.2rem;
+    }
+
+    .exp-card h2.gold-text {
+        font-size: 1.4rem;
+    }
+}

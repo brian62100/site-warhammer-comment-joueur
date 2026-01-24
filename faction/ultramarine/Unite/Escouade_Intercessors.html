@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Datasheet : Escouade d'Intercessors</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/infanterie.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+     <!-- BOUTON RETOUR INFANTERIE -->
+    <div class="infanterie-Back">
+        <a href="../um-infanterie.htm" class="back-infanterie-button">
+            ← Retour à la liste des Infanteries
+        </a>
+    </div>
+
+    <!-- BOUTONS FLÈCHES FIXES -->
+    <a href="intercesseurs-assaut.html" class="nav-arrow left">&#8592; Intercesseurs d’Assaut</a>
+    <a href="intercessors_dorsaux.html" class="nav-arrow right">Intercessors à réacteurs dorsaux &#8594;</a>
+
+    <div class="container">
+        <div class="exp-card datasheet">
+            <div class="datasheet-header">
+                <h2 class="gold-text">Escouade d'Intercessors</h2>
+                <span class="tag">Infanterie, Elite, Ultramarines</span>
+            </div>
+
+            <!-- STATS TABLE -->
+            <div class="stats-table-wrapper">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>Mouvement</th>
+                            <th>Endurance</th>
+                            <th>Sauvegarde</th>
+                            <th>PV</th>
+                            <th>Commandement</th>
+                            <th>Objectif (CO)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>15 cm</td>
+                            <td>4</td>
+                            <td>3+</td>
+                            <td>2</td>
+                            <td>6+</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">ARSENAL DE TIR</h4>
+            <div class="stats-table-wrapper">
+                <table class="weapon-table">
+                    <thead>
+                        <tr>
+                            <th>Arme</th>
+                            <th>Portée</th>
+                            <th>Attaques</th>
+                            <th>touche</th>
+                            <th>Force</th>
+                            <th>Pénétration</th>
+                            <th>Dégâts</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Fusil Bolter</td>
+                            <td>60 cm</td>
+                            <td>2</td>
+                            <td>3+</td>
+                            <td>4</td>
+                            <td>-1</td>
+                            <td>1</td>
+                            <td>[ASSAULT, Lourd]</td>
+                        </tr>
+                        <tr>
+                            <td>Lance-grenades Astartes fragmentation / krak</td>
+                            <td>60 cm</td>
+                            <td>D3/1</td>
+                            <td>3+</td>
+                            <td>4/9</td>
+                            <td>0/-2</td>
+                            <td>1/D3</td>
+                            <td>[explosion]</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">ARSENAL DE MÊLÉE </h4>
+            <div class="stats-table-wrapper">
+                <table class="weapon-table">
+                    <thead>
+                        <tr>
+                            <th>Arme</th>
+                            <th>Attaques</th>
+                            <th>touche</th>
+                            <th>Force</th>
+                            <th>Pénétration</th>
+                            <th>Dégâts</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Arme de combat rapproché</td>
+                            <td>3</td>
+                            <td>3+</td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">APTITUDES TACTIQUES</h4>
+            <div class="terminal" style="font-size: 0.85rem;">
+                <p><span class="gold-text">[Objectif atteint] :</span> Si vous contrôlez un marqueur d’objectif à la fin de votre phase de Commandement et que cette unité est à portée de ce marqueur, ce marqueur reste sous votre contrôle, même si vous n’avez aucun modèle à portée.</p>
+                <p><span class="gold-text">[Élimination des cibles] :</span> Chaque fois que cette unité est sélectionnée pour tirer, elle peut utiliser cette capacité. Si c’est le cas, jusqu’à la fin de la phase, ajoutez 2 aux attaques caractéristiques des fusils à verrou équipés par les modèles de cette unité et vous ne pourrez sélectionner qu’une seule unité ennemie comme cible de toutes les attaques de cette unité.</p>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">DICTIONNAIRE DES ARMES</h4>
+            <div class="terminal" style="font-size: 0.85rem; border-color: #005ab2;">
+                <p><span class="highlight">[EXPLOSION] :</span> Si l'unité ennemie a 5+ figurines, cette arme lance au minimum la moitié de ces attaques, et si elle a 10+ figurines, elle effectue le nombre max d'attaque.</p>
+                <p><span class="highlight">[Lourd] :</span> Ajoutez 1 aux jets pour toucher si l’unité du porteur est restée stationnaire ce tour-ci.</p>
+                <p><span class="highlight">[ASSAULT] :</span> Peut être tiré même si l’unité du porteur a avancé.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        fetch('navbar.htm')
+            .then(res => res.text())
+            .then(data => { document.getElementById('navbar-placeholder').innerHTML = data; });
+    </script>
+</body>
+</html>

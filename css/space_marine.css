@@ -1,0 +1,90 @@
+/* ===================================================== */
+/* PAGE CHAPITRES SPACE MARINES                          */
+/* ===================================================== */
+
+/* Grid spécifique */
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    padding: 30px;
+}
+
+/* Cards */
+.card {
+    border-left: 4px solid #005ab2; /* bleu Ultramarines */
+    border-radius: 6px;
+    background: #0d1117;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    color: #d4af37; /* texte description doré par défaut */
+    text-decoration: none;
+}
+
+/* Hover card */
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 20px rgba(0,90,178,0.5);
+}
+
+/* Logos des chapitres */
+.card img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+/* Titre h3 bleu foncé */
+.card h3 {
+    color: #005ab2;
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+/* Description dorée */
+.card p {
+    color: #d4af37;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+/* Désactiver le violet sur liens */
+.category-btn {
+    text-decoration: none;
+}
+.category-btn .card h3,
+.category-btn .card p {
+    color: inherit; /* garde les couleurs de la faction */
+}
+
+/* Disabled cards (chapitres non disponibles) */
+.card.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Retour aux Factions */
+a.highlight {
+    color: #d4af37;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a.highlight:hover {
+    color: #ffffff; /* hover blanc pour contraste */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}

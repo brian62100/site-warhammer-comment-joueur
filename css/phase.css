@@ -1,0 +1,283 @@
+/* ===================================================== */
+/* PHASES WH40K - CSS UNIFIÉ POUR TOUTES LES PHASES    */
+/* ===================================================== */
+
+/* ===================================================== */
+/* CORPS PRINCIPAL                                      */
+/* ===================================================== */
+body {
+    font-family: 'Exo 2', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0b0c1a, #121722);
+    color: #e0e0e0;
+    position: relative;
+    padding-top: 70px; /* espace pour navbar fixe */
+    overflow-x: hidden;
+}
+
+/* ===================================================== */
+/* NAVBAR FIXE                                          */
+/* ===================================================== */
+#navbar-placeholder {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 10000;
+    background-color: #1c1c1c;
+    border-bottom: 2px solid #005ab2;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+/* ===================================================== */
+/* CONTAINER                                           */
+/* ===================================================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 30px;
+    position: relative;
+}
+
+/* ===================================================== */
+/* DÉCOR BOLTERS SUR LES CÔTÉS                         */
+/* ===================================================== */
+/* Bolters décoratifs sur les côtés */
+.container::before,
+.container::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 400px;       /* largeur plus grande */
+    height: 180px;      /* hauteur plus grande */
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translateY(-50%); /* de base */
+    opacity: 0.6;       /* un peu plus visible si tu veux */
+    pointer-events: none;
+}
+
+/* Bolter gauche */
+.container::before {
+    left: -250px;        /* écart plus large à gauche */
+    background-image: url('../Images/bolter.png');
+}
+
+/* Bolter droit (miroir) */
+.container::after {
+    right: -250px;       /* écart plus large à droite */
+    background-image: url('../Images/bolter.png');
+    transform: translateY(-50%) scaleX(-1); /* miroir pour regarder vers la gauche */
+}
+
+
+
+/* ===================================================== */
+/* HEADER DE PHASE                                      */
+/* ===================================================== */
+header {
+    background: linear-gradient(135deg, rgba(0,90,178,0.15), rgba(0,0,0,0.9));
+    border-left: 6px solid #005ab2;
+    padding: 25px 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 20px rgba(0,90,178,0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Effet lumineux radial */
+header::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0,90,178,0.2) 0%, transparent 70%);
+    transform: rotate(45deg);
+    pointer-events: none;
+}
+
+/* Titre principal */
+header h1 {
+    color: #ffd966;
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    margin: 0 0 10px 0;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+
+/* Texte secondaire / terminal / citation */
+header .terminal {
+    background: #0a0e14;
+    border-left: 5px solid #005ab2;
+    padding: 20px 25px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    box-shadow: inset 0 0 20px rgba(0,90,178,0.5);
+    color: #e6e8eb;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+header .terminal::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,90,178,0.4) inset;
+    pointer-events: none;
+}
+
+header .terminal .gold-text {
+    color: #ffd966;
+    font-weight: 700;
+}
+
+/* ===================================================== */
+/* CARTES DE PHASE / EXP-CARD                            */
+/* ===================================================== */
+.experience-stack {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 28px;
+}
+
+/* Chaque carte */
+.exp-card {
+    background: linear-gradient(145deg, #111126, #111426);
+    border-left: 5px solid #005ab2;
+    border-radius: 12px;
+    padding: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0,90,178,0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glow / flare */
+.exp-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0,90,178,0.15) 0%, transparent 70%);
+    transform: rotate(45deg);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.exp-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 0 25px #005ab2, 0 0 15px #ffd966 inset;
+}
+
+.exp-card:hover::before {
+    background: radial-gradient(circle, rgba(0,90,178,0.3) 0%, transparent 70%);
+}
+
+/* Contenu interne */
+.exp-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Header interne */
+.exp-header-main h3 {
+    font-family: 'Cinzel', serif;
+    color: #ffd966;
+    font-size: 1.3rem;
+    margin: 0;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+.project-category {
+    font-size: 0.9rem;
+    color: #005ab2;
+    font-weight: bold;
+}
+
+/* Detail-box */
+.detail-box {
+    padding: 10px 0;
+}
+
+.task-list li {
+    line-height: 1.4;
+}
+
+.highlight {
+    color: #ffd966;
+    font-weight: 600;
+}
+
+/* ===================================================== */
+/* BOUTON CENTRAL WH40K */
+.btn-40k {
+    display: inline-block;
+    color: #ffd966;
+    font-weight: 700;
+    padding: 10px 20px;
+    background: linear-gradient(145deg, rgba(0,90,178,0.3), rgba(0,0,0,0.8));
+    border: 2px solid #005ab2;
+    border-radius: 6px;
+    text-decoration: none;
+    box-shadow: 0 0 10px #005ab2 inset;
+    transition: all 0.25s ease;
+}
+
+.btn-40k:hover {
+    background: linear-gradient(145deg, rgba(0,90,178,0.5), rgba(0,0,0,0.95));
+    box-shadow: 0 0 15px #005ab2, 0 0 12px #ffd966 inset;
+}
+
+/* ===================================================== */
+/* RESPONSIVE                                          */
+/* ===================================================== */
+@media screen and (max-width: 1024px) {
+    .experience-stack {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .experience-stack {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .exp-card {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    .exp-card {
+        padding: 15px;
+    }
+
+    .btn-40k {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}

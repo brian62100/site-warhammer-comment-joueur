@@ -1,0 +1,99 @@
+/* =============================================== */
+/* PHASE.CSS - Stratagèmes / Codex WH40K UX Design */
+/* =============================================== */
+
+body {
+    font-family: 'Exo 2', sans-serif;
+    background-color: #0a0a14;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* TITRE PRINCIPAL */
+h1 {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    color: #ffd966;
+    font-size: 3rem;
+    margin: 30px 0;
+    text-shadow: 0 0 10px #005ab2, 0 0 15px #001f3f;
+}
+
+/* BOUTON RETOUR */
+.codex-back {
+    margin: 20px;
+    text-align: left;
+}
+
+.back-button {
+    color: #ffd966;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: 2px solid #005ab2;
+    border-radius: 8px;
+    background: linear-gradient(145deg, rgba(0,90,178,0.2), rgba(0,0,0,0.7));
+    box-shadow: 0 0 10px rgba(0,90,178,0.6);
+    transition: all 0.3s ease;
+}
+.back-button:hover {
+    background: linear-gradient(145deg, rgba(0,90,178,0.5), rgba(0,0,0,0.9));
+    box-shadow: 0 0 20px #005ab2, 0 0 15px #ffd966 inset;
+    color: #ffd966;
+}
+
+/* GRILLE STRATAGÈMES */
+.stratageme-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 25px;
+}
+
+/* CARTES STRATAGÈMES */
+.stratageme-card {
+    background: linear-gradient(145deg, #111126, #1a1a2e);
+    border: 2px solid #005ab2;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0,90,178,0.5);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.stratageme-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 0 30px #005ab2, 0 0 20px #ffd966 inset;
+}
+
+/* HEADER DE LA CARTE */
+.stratageme-card h2 {
+    font-family: 'Cinzel', serif;
+    color: #ffd966;
+    font-size: 1.3rem;
+    margin: 0 0 10px 0;
+    text-shadow: 0 0 6px #001f3f;
+}
+
+/* TEXTE DE LA CARTE */
+.stratageme-card p {
+    margin: 6px 0;
+    line-height: 1.5;
+}
+
+.stratageme-card p strong {
+    color: #ffd966;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+    .stratageme-container {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+}

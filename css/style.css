@@ -1,0 +1,357 @@
+/* =====================================================
+   WARHAMMER 40K – FULL FACTION THEME CSS
+   UX moderne, sombre, codex / gothic sci-fi
+   Navbar retravaillée + dropdown stylé
+   Factions via body[data-faction]
+   ===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Exo+2:wght@300;500;700&family=Fira+Code:wght@400;600&display=swap');
+
+/* =====================================================
+   VARIABLES DE BASE (IMPERIUM NEUTRE)
+   ===================================================== */
+:root {
+  --bg-main: #050608;
+  --bg-panel: #0d1117;
+  --bg-panel-alt: #0a0e14;
+
+  --text-main: #e6e8eb;
+  --text-muted: #9aa4b2;
+
+  --accent-main: #c6a146; /* Or impérial */
+  --accent-soft: rgba(198,161,70,0.25);
+
+  --border-tech: 1px solid #2f353b;
+  --glow: 0 0 18px rgba(198,161,70,0.35);
+}
+
+/* =====================================================
+   FACTIONS
+   ===================================================== */
+body[data-faction="ultramarines"] {
+  --accent-main: #005ab2;
+  --accent-soft: rgba(0,90,178,0.35);
+  --glow: 0 0 20px rgba(0,90,178,0.5);
+}
+
+/* =====================================================
+   RESET + GLOBAL
+   ===================================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Exo 2', sans-serif;
+  color: var(--text-main);
+  background-color: var(--bg-main);
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+h1, h2, h3, .logo {
+  font-family: 'Cinzel', serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent-main);
+  text-shadow: var(--glow);
+}
+
+.highlight {
+  color: var(--accent-main);
+}
+
+/* =====================================================
+   NAVBAR – UX REWORK
+   ===================================================== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 4%;
+  background: linear-gradient(
+    to bottom,
+    rgba(13,17,23,0.98),
+    rgba(8,10,14,0.95)
+  );
+  border-bottom: 2px solid var(--accent-main);
+  box-shadow: var(--glow);
+}
+
+.logo {
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+/* NAV LINKS */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links > li {
+  position: relative;
+}
+
+.nav-links a {
+  display: block;
+  padding: 10px 4px;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--accent-main);
+  text-shadow: var(--glow);
+}
+
+/* UNDERLINE EFFECT */
+.nav-links > li > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  width: 0%;
+  height: 2px;
+  background: var(--accent-main);
+  transition: width 0.3s ease;
+}
+
+.nav-links > li > a:hover::after {
+  width: 100%;
+}
+
+/* =====================================================
+   DROPDOWN – COMMENT JOUER
+   ===================================================== */
+.dropdown-menu {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  min-width: 260px;
+  background: var(--bg-panel);
+  border: var(--border-tech);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
+}
+
+.dropdown-menu li a {
+  padding: 12px 16px;
+  font-size: 0.75rem;
+  border-left: 3px solid transparent;
+}
+
+.dropdown-menu li a:hover {
+  background: rgba(255,255,255,0.03);
+  border-left-color: var(--accent-main);
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.gold-text {
+  color: var(--accent-main);
+}
+
+/* RESET COMPLET DU BOUTON DROPDOWN */
+.dropdown-trigger {
+  all: unset;
+  cursor: pointer;
+
+  /* même style que les liens */
+  display: block;
+  padding: 10px 4px;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+/* Hover identique aux liens */
+.dropdown-trigger:hover {
+  color: var(--accent-main);
+  text-shadow: var(--glow);
+}
+
+/* Soulignement comme Accueil / Factions */
+.dropdown-trigger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  width: 0%;
+  height: 2px;
+  background: var(--accent-main);
+  transition: width 0.3s ease;
+}
+
+.dropdown:hover .dropdown-trigger::after {
+  width: 100%;
+}
+
+/* Chevron un peu plus stylé */
+.dropdown-trigger .chevron {
+  margin-left: 6px;
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+
+/* =====================================================
+   MAIN LAYOUT
+   ===================================================== */
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  padding: 30px;
+}
+
+/* =====================================================
+   PANELS / CARDS
+   ===================================================== */
+.card {
+  background: linear-gradient(
+    180deg,
+    var(--bg-panel),
+    var(--bg-panel-alt)
+  );
+  border: var(--border-tech);
+  padding: 24px;
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border-top: 2px solid var(--accent-main);
+  border-left: 2px solid var(--accent-main);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--glow);
+}
+
+/* =====================================================
+   TERMINAL / LORE BLOCK
+   ===================================================== */
+.terminal {
+  background: #000;
+  border-left: 4px solid var(--accent-main);
+  padding: 20px;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  box-shadow: inset 0 0 25px rgba(0,0,0,0.9);
+}
+
+/* =====================================================
+   BUTTONS
+   ===================================================== */
+.btn-40k {
+  background: transparent;
+  border: 1px solid var(--accent-main);
+  color: var(--accent-main);
+  padding: 12px 28px;
+  font-family: 'Cinzel', serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-40k:hover {
+  background: var(--accent-main);
+  color: #000;
+  box-shadow: var(--glow);
+}
+
+/* =====================================================
+   DATASHEETS
+   ===================================================== */
+.datasheet {
+  background: rgba(0,0,0,0.35);
+  border-left: 4px solid var(--accent-main);
+  padding: 26px;
+}
+
+.datasheet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--accent-soft);
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+}
+
+.tag {
+  background: var(--accent-main);
+  color: #fff;
+  padding: 3px 12px;
+  font-size: 0.65rem;
+  font-family: 'Fira Code', monospace;
+}
+
+/* =====================================================
+   TABLES
+   ===================================================== */
+.stats-table,
+.weapon-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Fira Code', monospace;
+  background: rgba(0,0,0,0.3);
+}
+
+.stats-table th,
+.weapon-table th {
+  background: var(--accent-soft);
+  color: var(--accent-main);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+.stats-table td,
+.weapon-table td {
+  padding: 12px;
+  border: 1px solid rgba(255,255,255,0.06);
+  text-align: center;
+}
+
+.weapon-table td:first-child {
+  text-align: left;
+  color: var(--accent-main);
+}
+
+.weapon-table tr:hover {
+  background: rgba(255,255,255,0.04);
+}

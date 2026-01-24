@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>CAPITAINE REACTEUR DORSAL | Adeptus Astartes</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/hero.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <!-- BOUTON RETOUR HERO -->
+    <div class="hero-back">
+        <a href="../um-heros.htm" class="back-hero-button">
+            ← Retour à la liste des Héros
+        </a>
+    </div>
+
+    <!-- BOUTONS FLÈCHES FIXES -->
+    <a href="LieutenantSpaceMarine.html" class="nav-arrow left">&#8592; Lieutenant Space Marine</a>
+    <a href="MarneusCalgar.html" class="nav-arrow right">Marneus Calgar &#8594;</a>
+
+    <div class="container">
+        <header>
+            <h1 class="highlight">CAPITAINE REACTEUR DORSAL</h1>
+            <p class="gold-text">Héros d'Elite // Adeptus Astartes</p>
+        </header>
+
+        <div class="exp-card datasheet">
+            <div class="datasheet-header">
+                <h2 class="gold-text">CAPITAINE REACTEUR DORSAL</h2>
+                <span class="tag">HÉROS, COMBAT, STRATÉGIE, ADEPTUS ASTARTES, CAPITAINE</span>
+            </div>
+
+            <div class="stats-table-wrapper">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>Mouvement</th>
+                            <th>Endurance</th>
+                            <th>Sauvegarde</th>
+                            <th>Invulnérable</th>
+                            <th>PV</th>
+                            <th>Commandement</th>
+                            <th>Objectif (CO)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>30 cm</td>
+                            <td>4</td>
+                            <td>3+</td>
+                            <td>4+</td>
+                            <td>5</td>
+                            <td>6+</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <h4 class="highlight" style="margin-top:20px;">ARMEMENT DE MÊLÉE</h4>
+            <div class="stats-table-wrapper">
+                <table class="weapon-table">
+                    <thead>
+                        <tr>
+                            <th>Arme</th>
+                            <th>Attaques</th>
+                            <th>touche</th>
+                            <th>Force</th>
+                            <th>Pénétration</th>
+                            <th>Dégâts</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Marteau Énergétique</td>
+                            <td>5</td>
+                            <td>3+</td>
+                            <td>8</td>
+                            <td>-2</td>
+                            <td>2</td>
+                            <td>[Blessures dévastatrices]</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">APTITUDES DE COMBAT</h4>
+            <div class="terminal">
+                <p><span class="gold-text">[La colère de l’ange] :</span> Pendant que ce modèle mène une unité, chaque fois que cette unité termine une attaque de Charge, jusqu’à la fin du tour, ajoutez 1 à la caractéristique de Force des armes de mêlée équipées par les modèles de cette unité. </p>
+                <p><span class="gold-text">[Rites de bataille] :</span> Une fois par round de bataille, une unité de votre armée possédant cette capacité peut l’utiliser lorsque son unité est ciblée par un stratagemme. Si c’est le cas, réduisez le coût en CP de cette utilisation de cette stratagémie de 1CP.</p>
+                <p><span class="gold-text">[VOL] & [FRAPPE EN PROFONDEUR] :</span> Déplacements libres et déploiement stratégique (22.5 cm des ennemis).</p>
+                <p><span class="gold-text">[Bouclier Relique] :</span> Le porteur a une caractéristique de Blessures de 6.</p>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">DICTIONNAIRE DES ARMES</h4>
+            <div class="terminal" style="font-size: 0.85rem; border-color: #005ab2;">
+                <p><span class="highlight">[Blessures dévastatrices] :</span> pour chaque blessure critique infligé, inflige directement les dégàts (sauf si no pain x).</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        fetch('navbar.htm').then(res => res.text()).then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+    </script>
+</body>
+</html>

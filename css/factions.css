@@ -1,0 +1,116 @@
+/* ===================================================== */
+/* PAGE FACTIONS SPECIFIQUE                               */
+/* ===================================================== */
+
+/* Grid spécifique */
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    padding: 30px;
+}
+
+/* Cards */
+.faction-card, .card.faction {
+    border-left: 4px solid;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.faction-card:hover, .card.faction:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 18px rgba(255,255,255,0.25);
+}
+
+/* Logos des factions */
+.project-image-placeholder {
+    width: 100%;
+    height: 120px;          
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    color: #9aa4b2;
+}
+
+/* Disabled cards */
+.faction.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ===================================================== */
+/* Couleurs par faction                                   */
+/* ===================================================== */
+
+/* Space Marines */
+.faction.ultramarines {
+    border-color: #005ab2;             /* Bleu bord */
+}
+.faction.ultramarines .gold-text { color: #0a3d91; }  /* Titre bleu foncé */
+.faction.ultramarines .project-category,
+.faction.ultramarines .project-content p { color: #d4af37; }  /* Texte doré */
+
+/* Tyranides */
+.faction.tyranides {
+    border-color: #5a0a7b;             /* Violet bord */
+}
+.faction.tyranides .gold-text { color: #0a3d91; }       /* Titre bleu foncé */
+.faction.tyranides .project-category,
+.faction.tyranides .project-content p { color: #b48adb; } /* Texte violet doux */
+
+/* Necrons */
+.faction.necrons {
+    border-color: #1a4522;             /* Vert bord */
+}
+.faction.necrons .gold-text { color: #0a3d91; }        /* Titre bleu foncé */
+.faction.necrons .project-category,
+.faction.necrons .project-content p { color: #70ff7f; } /* Texte vert clair */
+
+/* Tau */
+.faction.tau {
+    border-color: #ff5500;             /* Orange bord */
+}
+.faction.tau .gold-text { color: #0a3d91; }           /* Titre bleu foncé */
+.faction.tau .project-category,
+.faction.tau .project-content p { color: #ffccaa; }   /* Texte orange/rouge clair */
+
+/* Texte ACCÈS REFUSÉ */
+.access-denied {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.75rem;
+    color: #ff3333;
+}
+
+/* Désactiver le violet sur liens éventuels */
+.project-content a {
+    text-decoration: none;
+}
+.project-content a:hover {
+    color: #005ab2 !important; /* bleu hover si tu veux */
+}
+
+/* Hover card glow */
+.card.faction:hover {
+    box-shadow: 0 0 20px rgba(212,175,55,0.5);
+    transform: translateY(-4px);
+}
+
+/* Texte "OUVRIR LES ARCHIVES" en blanc */
+.card.faction .highlight {
+    color: #ffffff !important;
+    font-weight: 600;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+}

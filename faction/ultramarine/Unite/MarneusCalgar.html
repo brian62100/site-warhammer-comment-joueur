@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>MARNEUS CALGAR | Ultramarines</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/hero.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <!-- BOUTON RETOUR HERO -->
+    <div class="hero-back">
+        <a href="../um-heros.htm" class="back-hero-button">
+            ← Retour à la liste des Héros
+        </a>
+    </div>
+
+    <!-- BOUTONS FLÈCHES FIXES -->
+    <a href="CapitaineReacteurDorsal.html" class="nav-arrow left">&#8592; Capitaine à Réacteur Dorsal</a>
+    <a href="RobouteGuilliman.html" class="nav-arrow right">Roboute Guilliman &#8594;</a>
+
+
+    <div class="container">
+        <header>
+            <h1 class="highlight">MARNEUS CALGAR</h1>
+            <p class="gold-text">Héros Suprême // Adeptus Astartes</p>
+        </header>
+
+        <div class="exp-card datasheet">
+            <div class="datasheet-header">
+                <h2 class="gold-text">MARNEUS CALGAR</h2>
+                <span class="tag">HÉROS, CAPITAINE, ULTRAMARINES, COMBAT, STRATÉGIE</span>
+            </div>
+
+            <div class="stats-table-wrapper">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>Mouvement</th>
+                            <th>Endurance</th>
+                            <th>Sauvegarde</th>
+                            <th>Invulnérable</th>
+                            <th>PV</th>
+                            <th>Commandement</th>
+                            <th>Objectif (CO)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>15 cm</td>
+                            <td>6</td>
+                            <td>2+</td>
+                            <td>4+</td>
+                            <td>6</td>
+                            <td>6+</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">ARSENAL DE TIR</h4>
+            <div class="stats-table-wrapper">
+                <table class="weapon-table">
+                    <thead>
+                        <tr>
+                            <th>Arme</th>
+                            <th>Portée</th>
+                            <th>Attaques</th>
+                            <th>touche</th>
+                            <th>Force</th>
+                            <th>Pénétration</th>
+                            <th>Dégâts</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Gantelets d’Ultramar</td>
+                            <td>45 cm</td>
+                            <td>4</td>
+                            <td>2+</td>
+                            <td>4</td>
+                            <td>-1</td>
+                            <td>2</td>
+                            <td>[pistolet, jumelé]</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">ARSENAL DE MÊLÉE</h4>
+            <div class="stats-table-wrapper">
+                <table class="weapon-table">
+                    <thead>
+                        <tr>
+                            <th>Arme</th>
+                            <th>Attaques</th>
+                            <th>touche</th>
+                            <th>Force</th>
+                            <th>Pénétration</th>
+                            <th>Dégâts</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Gantelets d’Ultramar</td>
+                            <td>6</td>
+                            <td>2+</td>
+                            <td>8</td>
+                            <td>-3</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">APTITUDES DE COMMANDEMENT</h4>
+            <div class="terminal">
+                <p><span class="gold-text">[Leader inspirant] :</span> Cette unité est éligible à tirer et à déclarer une charge lors d’un tour où elle a avancé ou reculé.</p>
+                <p><span class="gold-text">[Maître Tacticien] :</span> Au début de votre phase de commandement, si ce modèle est votre WARLORD et sur le champ de bataille, vous gagnez 1CP.</p>
+                <p><span class="gold-text">[FRAPPE EN PROFONDEUR] :</span> déploiement stratégique (22.5 cm des ennemis).</p>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">DICTIONNAIRE DES ARMES</h4>
+            <div class="terminal" style="font-size: 0.85rem; border-color: #005ab2;">
+                <p><span class="highlight">[Pistolet] :</span> Peut être tiré même si l’unité du porteur est à portée d’engagement des unités ennemies, mais doit viser l’une de ces unités ennemies. Ne peut pas être tiré en même temps qu’une autre arme non pistolet (sauf par un MONSTRE ou un VÉHICULE).</p>
+                <p><span class="highlight">[JUMELÉ] :</span> Permet de relancer le jet pour <strong>Blesser</strong>.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        fetch('navbar.htm').then(res => res.text()).then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+    </script>
+</body>
+</html>

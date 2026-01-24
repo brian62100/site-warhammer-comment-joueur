@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>LIEUTENANT ULTRAMARINES | Adeptus Astartes</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/hero.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <!-- BOUTON RETOUR HERO -->
+    <div class="hero-back">
+        <a href="../um-heros.htm" class="back-hero-button">
+            ← Retour à la liste des Héros
+        </a>
+    </div>
+
+    <!-- BOUTONS FLÈCHES FIXES -->
+    <a href="CatoSicarius.html" class="nav-arrow left">&#8592; Cato Sicarius</a>
+    <a href="CapitaineReacteurDorsal.html" class="nav-arrow right">Capitaine à Réacteur Dorsal &#8594;</a>
+
+    <div class="container">
+        <header>
+            <h1 class="highlight">LIEUTENANT ULTRAMARINES</h1>
+            <p class="gold-text">Héros d'Elite // Adeptus Astartes</p>
+        </header>
+
+        <div class="exp-card datasheet">
+            <div class="datasheet-header">
+                <h2 class="gold-text">LIEUTENANT ULTRAMARINES</h2>
+                <span class="tag">HÉROS, COMBAT, STRATÉGIE, ADEPTUS ASTARTES, LIEUTENANT</span>
+            </div>
+
+            <div class="stats-table-wrapper">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>Mouvement</th>
+                            <th>Endurance</th>
+                            <th>Sauvegarde</th>
+                            <th>PV</th>
+                            <th>Commandement</th>
+                            <th>Objectif (CO)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>15 cm</td>
+                            <td>4</td>
+                            <td>3+</td>
+                            <td>4</td>
+                            <td>6+</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">ARSENAL DE TIR</h4>
+            <div class="stats-table-wrapper">
+                <table class="weapon-table">
+                    <thead>
+                        <tr>
+                            <th>Arme</th>
+                            <th>Portée</th>
+                            <th>Attaques</th>
+                            <th>touche</th>
+                            <th>Force</th>
+                            <th>Pénétration</th>
+                            <th>Dégâts</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pistolet Bolter lourd</td>
+                            <td>45 cm</td>
+                            <td>1</td>
+                            <td>2+</td>
+                            <td>4</td>
+                            <td>-1</td>
+                            <td>1</td>
+                            <td>[pistolet]</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h4 class="highlight" style="margin-top:20px;">ARSENAL DE MÊLÉE</h4>
+            <div class="stats-table-wrapper">
+                <table class="weapon-table">
+                    <thead>
+                        <tr>
+                            <th>Arme</th>
+                            <th>Attaques</th>
+                            <th>touche</th>
+                            <th>Force</th>
+                            <th>Pénétration</th>
+                            <th>Dégâts</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Épée Énergétique maître</td>
+                            <td>5</td>
+                            <td>2+</td>
+                            <td>5</td>
+                            <td>-2</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">APTITUDES DE COMMANDEMENT</h4>
+            <div class="terminal">
+                <p><span class="gold-text">[Précision tactique] :</span> Alors que ce modèle dirige une unité, les armes équipées par les modèles de cette unité ont le [COUPS LÉTALS] capacité.</p>
+                <p><span class="gold-text">[Priorité des cibles] :</span> L’unité de ce modèle est éligible à tirer et à déclarer une charge lors d’un tour où elle a reculé.</p>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">DICTIONNAIRE DES ARMES</h4>
+            <div class="terminal" style="font-size: 0.85rem; border-color: #005ab2;">
+                <p><span class="highlight">[Pistolet] :</span> Peut être tiré même si l’unité du porteur est à portée d’engagement des unités ennemies, mais doit viser l’une de ces unités ennemies. Ne peut pas être tiré en même temps qu’une autre arme non pistolet (sauf par un MONSTRE ou un VÉHICULE).</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        fetch('navbar.htm').then(res => res.text()).then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Datasheet : Centurions Devastator</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/infanterie.css">
+    
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+     <!-- BOUTON RETOUR INFANTERIE -->
+    <div class="infanterie-Back">
+        <a href="../um-infanterie.htm" class="back-infanterie-button">
+            ← Retour à la liste des Infanteries
+        </a>
+    </div>
+
+    <!-- BOUTONS FLÈCHES FIXES -->
+    <a href="escouade-tactique.html" class="nav-arrow left">&#8592; Escouade Tactique</a>
+    <a href="escouade-terminator.html" class="nav-arrow right">Escouade Terminator &#8594;</a>
+
+    <div class="container">
+        <div class="datasheet">
+            <div class="datasheet-header">
+                <h2>Centurions Devastator</h2>
+                <span class="tag">Elite, Infanterie Lourde, Ultramarines</span>
+            </div>
+
+            <!-- STATS TABLE -->
+            <div class="stats-table-wrapper">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>Mouvement</th>
+                            <th>Endurance</th>
+                            <th>Sauvegarde</th>
+                            <th>PV</th>
+                            <th>Commandement</th>
+                            <th>Objectif (CO)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10 cm</td>
+                            <td>7</td>
+                            <td>2+</td>
+                            <td>4</td>
+                            <td>6+</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">ARSENAL DE TIR</h4>
+            <div class="stats-table-wrapper">
+                <table class="weapon-table">
+                    <thead>
+                        <tr>
+                            <th>Arme</th>
+                            <th>Portée</th>
+                            <th>Attaques</th>
+                            <th>touche</th>
+                            <th>Force</th>
+                            <th>Pénétration</th>
+                            <th>Dégâts</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Canon Laser Jumelé</td>
+                            <td>120 cm</td>
+                            <td>1</td>
+                            <td>3+</td>
+                            <td>12</td>
+                            <td>-3</td>
+                            <td>D6+1</td>
+                            <td>[JUMELÉ]</td>
+                        </tr>
+                        <tr>
+                            <td>Bolter Lourd Jumelé</td>
+                            <td>90 cm</td>
+                            <td>3</td>
+                            <td>3+</td>
+                            <td>5</td>
+                            <td>-1</td>
+                            <td>2</td>
+                            <td>[JUMELÉ] [COUPS SOUTENUS 1]</td>
+                        </tr>
+                        <tr>
+                            <td>Lance-missiles Ironclad</td>
+                            <td>90 cm</td>
+                            <td>D3</td>
+                            <td>+3</td>
+                            <td>9</td>
+                            <td>-2</td>
+                            <td>D3</td>
+                            <td>[ANTI-VÉHICULE 2+]</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">ARSENAL DE MÊLÉE</h4>
+            <div class="stats-table-wrapper">
+                <table class="weapon-table">
+                    <thead>
+                        <tr>
+                            <th>Arme</th>
+                            <th>Attaques</th>
+                            <th>touche</th>
+                            <th>Force</th>
+                            <th>Pénétration</th>
+                            <th>Dégâts</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Poings de centurion</td>
+                            <td>3</td>
+                            <td>4+</td>
+                            <td>5</td>
+                            <td>-1</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">APTITUDES TACTIQUES</h4>
+            <div class="terminal" style="font-size: 0.85rem;">
+                <p><span class="gold-text">[PROTOCOLE DE DÉCIMATION] :</span> Chaque fois qu’un modèle de cette unité effectue une attaque à distance, relance un jet de Coup de 1. Si la cible de cette attaque est une unité ennemie à portée d’un marqueur d’objectif, vous pouvez relancer le jet de Hit.
+
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">DICTIONNAIRE DES ARMES</h4>
+            <div class="terminal" style="font-size: 0.85rem; border-color: #005ab2;">
+                <p><span class="highlight">[JUMELÉ] :</span> Permet de relancer le jet pour <strong>Blesser</strong>.</p>
+                <p><span class="highlight">[ANTI-VÉHICULE 2+] :</span> Blesse automatiquement un VÉHICULE sur un jet de 2+.</p>
+                <p><span class="highlight">[COUPS SOUTENUS 1] :</span> Chaque Coup Critique inflige 1 coups supplémentaires sur la cible.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        fetch('navbar.htm')
+            .then(res => res.text())
+            .then(data => { document.getElementById('navbar-placeholder').innerHTML = data; });
+    </script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Datasheet : Escouade d’Intercesseurs d’Assaut</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/infanterie.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+     <!-- BOUTON RETOUR INFANTERIE -->
+    <div class="infanterie-Back">
+        <a href="../um-infanterie.htm" class="back-infanterie-button">
+            ← Retour à la liste des Infanteries
+        </a>
+    </div>
+
+    <!-- BOUTONS FLÈCHES FIXES -->
+    <a href="garde-victrix.html" class="nav-arrow left">&#8592; Garde d’honneur Victrix</a>
+    <a href="Escouade_Intercessors.html" class="nav-arrow right">Escouade d’Intercessors &#8594;</a>
+
+
+    <div class="container">
+        <div class="datasheet">
+            <div class="datasheet-header">
+                <h2>Escouade d’Intercesseurs d’Assaut</h2>
+                <span class="tag">Elite, Infanterie, Ultramarines, Réacteurs dorsaux</span>
+            </div>
+
+            <!-- STATS TABLE -->
+            <div class="stats-table-wrapper">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>Mouvement</th>
+                            <th>Endurance</th>
+                            <th>Sauvegarde</th>
+                            <th>PV</th>
+                            <th>Commandement</th>
+                            <th>Objectif (CO)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>15 cm</td>
+                            <td>4</td>
+                            <td>3+</td>
+                            <td>2</td>
+                            <td>6+</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">ARSENAL DE TIR</h4>
+            <div class="stats-table-wrapper">
+                <table class="weapon-table">
+                    <thead>
+                        <tr>
+                            <th>Arme</th>
+                            <th>Portée</th>
+                            <th>Attaques</th>
+                            <th>touche</th>
+                            <th>Force</th>
+                            <th>Pénétration</th>
+                            <th>Dégâts</th>
+                            <th>Types</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>9 Pistolet à culasse lourde</td>
+                            <td>45 cm</td>
+                            <td>1</td>
+                            <td>3+</td>
+                            <td>4</td>
+                            <td>-1</td>
+                            <td>1</td>
+                            <td>[pistolet]</td>
+                        </tr>
+                        <tr>
+                            <td>1 Pistolet Plasma</td>
+                            <td>30 cm</td>
+                            <td>1</td>
+                            <td>3+</td>
+                            <td>7/8</td>
+                            <td>-2/-3</td>
+                            <td>1/2</td>
+                            <td>[Pistolet]/[Pistolet, Dangereux]</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">ARSENAL DE MÊLÉE </h4>
+            <div class="stats-table-wrapper">
+                <table class="weapon-table">
+                    <thead>
+                        <tr>
+                            <th>Arme</th>
+                            <th>Attaques</th>
+                            <th>touche</th>
+                            <th>Force</th>
+                            <th>Pénétration</th>
+                            <th>Dégâts</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1 Épée Énergétique</td>
+                            <td>4</td>
+                            <td>3+</td>
+                            <td>5</td>
+                            <td>-2</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>9 Épée Tronçonneuse</td>
+                            <td>4</td>
+                            <td>3+</td>
+                            <td>4</td>
+                            <td>-1</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">APTITUDES TACTIQUES</h4>
+            <div class="terminal" style="font-size: 0.85rem;">
+                <p><span class="gold-text">[Assaut de choc] :</span> Chaque fois qu’un modèle de cette unité vise une unité ennemie avec une attaque de mêlée, relance un jet de Blessure de 1. Si cette unité ennemie est à portée d’un marqueur d’objectif, vous pouvez relancer le jet de blessure à la place.</p>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">DICTIONNAIRE DES ARMES</h4>
+            <div class="terminal" style="font-size: 0.85rem; border-color: #005ab2;">
+                <p><span class="highlight">[Pistolet] :</span> Peut être tiré même si l’unité du porteur est à portée d’engagement des unités ennemies, mais doit viser l’une de ces unités ennemies. Ne peut pas être tiré en même temps qu’une autre arme non pistolet (sauf par un MONSTRE ou un VÉHICULE).</p>
+                <p><span class="highlight">[Dangereux] :</span> lance un D6 après l'attaque de l'unité si le resulta est 1 alors l'unité subit 3 Blessures dévastatrices.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        fetch('navbar.htm')
+            .then(res => res.text())
+            .then(data => { document.getElementById('navbar-placeholder').innerHTML = data; });
+    </script>
+</body>
+</html>

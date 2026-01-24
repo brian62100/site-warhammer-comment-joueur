@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Datasheet : Escouade d’Assaut Terminator</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/infanterie.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+     <!-- BOUTON RETOUR INFANTERIE -->
+    <div class="infanterie-Back">
+        <a href="../um-infanterie.htm" class="back-infanterie-button">
+            ← Retour à la liste des Infanteries
+        </a>
+    </div>
+
+    <!-- BOUTONS FLÈCHES FIXES -->
+    <a href="escouade-terminator.html" class="nav-arrow left">&#8592; Escouade Terminator</a>
+    <a href="garde-victrix.html" class="nav-arrow right">Garde d’honneur Victrix &#8594;</a>
+
+    <div class="container">
+        <div class="datasheet">
+            <div class="datasheet-header">
+                <h2>Escouade d’Assaut Terminator</h2>
+                <span class="tag">Elite, Infanterie, Ultramarines</span>
+            </div>
+
+            <!-- STATS TABLE -->
+            <div class="stats-table-wrapper">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>Mouvement</th>
+                            <th>Endurance</th>
+                            <th>Sauvegarde</th>
+                            <th>Invulnérable</th>
+                            <th>PV</th>
+                            <th>Commandement</th>
+                            <th>Objectif (CO)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>12.5 cm</td>
+                            <td>5</td>
+                            <td>2+</td>
+                            <td>4+</td>
+                            <td>3</td>
+                            <td>6+</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">ARSENAL DE MÊLÉE </h4>
+            <div class="stats-table-wrapper">
+                <table class="weapon-table">
+                    <thead>
+                        <tr>
+                            <th>Arme</th>
+                            <th>Attaques</th>
+                            <th>touche</th>
+                            <th>Force</th>
+                            <th>Pénétration</th>
+                            <th>Dégâts</th>
+                            <th>type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Marteau tonnerre</td>
+                            <td>3</td>
+                            <td>3+</td>
+                            <td>8</td>
+                            <td>-2</td>
+                            <td>2</td>
+                            <td>Blessures dévastatrices</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">APTITUDES TACTIQUES</h4>
+            <div class="terminal" style="font-size: 0.85rem;">
+                <p><span class="gold-text">[Téléporte Homer] :</span> Au début du combat, vous pouvez configurer un jeton Homer de Téléportation pour cette unité n’importe où sur le champ de bataille qui ne se trouve pas dans la zone de déploiement de votre adversaire. Si vous le faites, une fois par combat, vous pouvez cibler cette unité avec la Stratagème d’Entrée Rapide pour 0CP, mais lors de la résolution de cette stratagème, vous devez placer cette unité à moins de 3 » de ce jeton et non à moins de 9 » des modèles ennemis. Ce jeton est alors retiré.</p>
+                <p><span class="gold-text">[Assaut Terminatus] :</span> Au début de la phase de combat, chaque unité ennemie à portée d’engagement de cette unité doit passer un test de choc de bataille.</p>
+                <p><span class="gold-text">[Bouclier de tempête] :</span> Le porteur a une caractéristique de Blessures de 4.</p>
+            </div>
+
+            <h4 class="highlight" style="margin-top:20px;">DICTIONNAIRE DES ARMES</h4>
+            <div class="terminal" style="font-size: 0.85rem; border-color: #005ab2;">
+                <p><span class="highlight">[Blessures dévastatrices] :</span> pour chaque blessure critique infligé, inflige directement les dégàts (sauf si no pain x).</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        fetch('navbar.htm')
+            .then(res => res.text())
+            .then(data => { document.getElementById('navbar-placeholder').innerHTML = data; });
+    </script>
+</body>
+</html>
